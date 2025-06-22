@@ -35,9 +35,16 @@
     />
     <title>Lắp đặt Internet FPT - Camera FPT Bình Định</title>
     <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="footer.css" />
     <link
       rel="icon"
       href="https://upload.wikimedia.org/wikipedia/commons/2/2f/FPT_logo_2010.svg"
+    />
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <!-- Google Analytics (replace 'G-XXXXXXX' with your ID) -->
     <script
@@ -66,7 +73,6 @@
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
       }
       .call-now {
-        display: none;
         position: fixed;
         bottom: 18px;
         right: 18px;
@@ -82,24 +88,11 @@
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
         font-size: 2rem;
       }
-      @media (max-width: 600px) {
-        .call-now {
-          display: flex;
-        }
-      }
     </style>
   </head>
   <body>
-    <header>
-      <img src="LogoFPT.png" alt="FPT Telecom Logo" class="logo" />
-      <nav aria-label="Main navigation">
-        <a href="index.html" class="active">Trang chủ</a>
-        <a href="products.html">Sản phẩm</a>
-        <a href="combo.html">Combo</a>
-        <a href="baogia.html">Báo giá</a>
-        <a href="lienhe.html">Liên hệ</a>
-      </nav>
-    </header>
+    <!-- Include Header -->
+    <div id="header-placeholder"></div>
 
     <main>
       <!-- Hero Section with Video Background -->
@@ -112,12 +105,34 @@
           <div class="video-overlay"></div>
         </div>
         <div class="hero-content">
-          <h1>Lắp đặt Internet FPT - Camera FPT Bình Định</h1>
+          <h1>FPT Telecom Bình Định</h1>
           <p class="subtitle">
             Dịch vụ uy tín, tốc độ cao, khuyến mãi hấp dẫn. Đăng ký ngay hôm
             nay!
           </p>
-          <a href="lienhe.html" class="btn">Đăng ký lắp đặt ngay</a>
+          <div class="hero-buttons">
+            <a href="lienhe.html" class="btn btn-primary"
+              >Đăng ký lắp đặt ngay</a
+            >
+            <a href="#services" class="btn btn-secondary">Xem gói dịch vụ</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <i class="fas fa-users"></i>
+              <span class="stat-number">50,000+</span>
+              <span class="stat-label">Khách hàng</span>
+            </div>
+            <div class="stat-item">
+              <i class="fas fa-wifi"></i>
+              <span class="stat-number">99.9%</span>
+              <span class="stat-label">Uptime</span>
+            </div>
+            <div class="stat-item">
+              <i class="fas fa-star"></i>
+              <span class="stat-number">4.8/5</span>
+              <span class="stat-label">Đánh giá</span>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -129,10 +144,27 @@
           cung cấp các dịch vụ Internet, truyền hình, combo giải trí, camera an
           ninh với chất lượng vượt trội và giá cả cạnh tranh.
         </p>
+        <div class="about-features">
+          <div class="about-feature">
+            <i class="fas fa-rocket"></i>
+            <h3>Tiên phong công nghệ</h3>
+            <p>Áp dụng công nghệ mới nhất, đảm bảo tốc độ và ổn định</p>
+          </div>
+          <div class="about-feature">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Bảo mật tuyệt đối</h3>
+            <p>Hệ thống bảo mật đa lớp, bảo vệ thông tin khách hàng</p>
+          </div>
+          <div class="about-feature">
+            <i class="fas fa-headset"></i>
+            <h3>Hỗ trợ 24/7</h3>
+            <p>Đội ngũ kỹ thuật viên chuyên nghiệp, sẵn sàng hỗ trợ mọi lúc</p>
+          </div>
+        </div>
       </section>
 
       <!-- Services Section -->
-      <section class="services-section fade-in-up">
+      <section id="services" class="services-section fade-in-up">
         <h2>Gói dịch vụ nổi bật</h2>
         <p class="subtitle">
           Bao gồm gói giá khuyến mãi - Đáp ứng mọi nhu cầu cuộc sống cá nhân,
@@ -144,6 +176,7 @@
           <div class="package package-camera-combo fade-in-up">
             <div class="package-header">
               <img src="comboGiGaEyes3 - Play4.png" alt="GigaEyes3 - Play 4" />
+              <div class="package-badge">Bán chạy</div>
             </div>
             <div class="package-body">
               <h2>GigaEyes3 - Play 4</h2>
@@ -154,12 +187,14 @@
                 <li>Gói lưu trữ Cloud 3 ngày</li>
                 <li>Mua 2 camera giá chỉ 350k/cam</li>
               </ul>
+              <a href="lienhe.html" class="btn">Đăng ký ngay</a>
             </div>
           </div>
           <!-- GigaEyes3 - IQ4S -->
           <div class="package package-camera-combo fade-in-up">
             <div class="package-header">
               <img src="comboGigaEyes3-IQ4S.png" alt="GigaEyes3 - IQ4S" />
+              <div class="package-badge">Mới</div>
             </div>
             <div class="package-body">
               <h2>GigaEyes3 - IQ4S</h2>
@@ -170,6 +205,7 @@
                 <li>Gói lưu trữ Cloud 3 ngày</li>
                 <li>Mua 2 camera giá chỉ 350k/cam</li>
               </ul>
+              <a href="lienhe.html" class="btn">Đăng ký ngay</a>
             </div>
           </div>
           <!-- GigaEyes3 - Play 3 -->
@@ -186,12 +222,14 @@
                 <li>Gói lưu trữ Cloud 3 ngày</li>
                 <li>Mua 2 camera giá chỉ 350k/cam</li>
               </ul>
+              <a href="lienhe.html" class="btn">Đăng ký ngay</a>
             </div>
           </div>
           <!-- SkyEyes3 - Play4 -->
           <div class="package package-camera-combo fade-in-up">
             <div class="package-header">
               <img src="comboSkyEyes3 - Play 4.png" alt="SkyEyes3 - Play4" />
+              <div class="package-badge">Cao cấp</div>
             </div>
             <div class="package-body">
               <h2>SkyEyes3 - Play4</h2>
@@ -202,6 +240,7 @@
                 <li>Gói lưu trữ Cloud 3 ngày</li>
                 <li>Mua 2 camera giá chỉ 350k/cam</li>
               </ul>
+              <a href="lienhe.html" class="btn">Đăng ký ngay</a>
             </div>
           </div>
         </div>
@@ -209,32 +248,40 @@
         <div class="packages standard-combos">
           <!-- Combo Giải trí -->
           <div class="package fade-in-up">
+            <div class="package-icon">
+              <i class="fas fa-tv"></i>
+            </div>
             <h2>Combo Giải trí</h2>
             <div class="price">200.000đ<span>/tháng</span></div>
             <ul>
               <li>Trang bị Modem Wi-Fi 6 & FPT Play Box</li>
               <li>Tốc độ Download/Upload 300 Mbps</li>
               <li>Kho phim lẻ, phim bộ, phim chiếu rạp, anime đa dạng</li>
-              <li>
-                Phù hợp cá nhân, hộ gia đình có từ 3 thiết bị kết nối trở lên
-              </li>
+              <li>Phù hợp gia đình trên 3 thiết bị</li>
             </ul>
+            <a href="lienhe.html" class="btn">Đăng ký ngay</a>
           </div>
           <!-- Combo An Tâm -->
           <div class="package fade-in-up">
+            <div class="package-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
             <h2>Combo An Tâm</h2>
             <div class="price">245.000đ<span>/tháng</span></div>
             <ul>
               <li>Trang bị Modem Wi-Fi 6 & FPT Play Box</li>
               <li>
-                Chặn trang web độc hại, lừa đảo và quản lý thời gian, nội dung
-                truy cập internet của trẻ
+                Bảo vệ trẻ em online, chặn web độc hại
               </li>
               <li>Xem hơn 130 kênh truyền hình trong nước & quốc tế</li>
             </ul>
+            <a href="lienhe.html" class="btn">Đăng ký ngay</a>
           </div>
           <!-- Combo GIGA -->
           <div class="package fade-in-up">
+            <div class="package-icon">
+              <i class="fas fa-bolt"></i>
+            </div>
             <h2>Combo GIGA</h2>
             <div class="price">230.000đ<span>/tháng</span></div>
             <ul>
@@ -242,9 +289,13 @@
               <li>Phù hợp cá nhân, hộ gia đình</li>
               <li>Xem hơn 130 kênh truyền hình trong nước và quốc tế</li>
             </ul>
+            <a href="lienhe.html" class="btn">Đăng ký ngay</a>
           </div>
           <!-- Combo SKY -->
           <div class="package fade-in-up">
+            <div class="package-icon">
+              <i class="fas fa-cloud"></i>
+            </div>
             <h2>Combo SKY</h2>
             <div class="price">230.000đ<span>/tháng</span></div>
             <ul>
@@ -252,7 +303,74 @@
               <li>Xem hơn 130 kênh truyền hình trong nước và quốc tế</li>
               <li>Phù hợp với hộ gia đình</li>
             </ul>
+            <a href="lienhe.html" class="btn">Đăng ký ngay</a>
           </div>
+        </div>
+      </section>
+
+      <!-- Service Comparison Table -->
+      <section class="comparison-section fade-in-up">
+        <h2>So sánh gói dịch vụ</h2>
+        <p class="subtitle">
+          Chọn gói dịch vụ phù hợp nhất với nhu cầu của bạn
+        </p>
+
+        <div class="comparison-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Tính năng</th>
+                <th>Combo Giải trí</th>
+                <th>Combo An Tâm</th>
+                <th>Combo GIGA</th>
+                <th>Combo SKY</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Tốc độ Internet</td>
+                <td>300 Mbps</td>
+                <td>300 Mbps</td>
+                <td>300 Mbps</td>
+                <td>300 Mbps</td>
+              </tr>
+              <tr>
+                <td>Modem Wi-Fi 6</td>
+                <td><i class="fas fa-check text-success"></i></td>
+                <td><i class="fas fa-check text-success"></i></td>
+                <td><i class="fas fa-check text-success"></i></td>
+                <td><i class="fas fa-check text-success"></i></td>
+              </tr>
+              <tr>
+                <td>FPT Play Box</td>
+                <td><i class="fas fa-check text-success"></i></td>
+                <td><i class="fas fa-check text-success"></i></td>
+                <td><i class="fas fa-check text-success"></i></td>
+                <td><i class="fas fa-check text-success"></i></td>
+              </tr>
+              <tr>
+                <td>Kênh truyền hình</td>
+                <td>130+ kênh</td>
+                <td>130+ kênh</td>
+                <td>130+ kênh</td>
+                <td>130+ kênh</td>
+              </tr>
+              <tr>
+                <td>Bảo mật trẻ em</td>
+                <td><i class="fas fa-times text-muted"></i></td>
+                <td><i class="fas fa-check text-success"></i></td>
+                <td><i class="fas fa-times text-muted"></i></td>
+                <td><i class="fas fa-times text-muted"></i></td>
+              </tr>
+              <tr>
+                <td>Giá/tháng</td>
+                <td class="price-cell">200.000đ</td>
+                <td class="price-cell">245.000đ</td>
+                <td class="price-cell">230.000đ</td>
+                <td class="price-cell">230.000đ</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </section>
 
@@ -282,61 +400,258 @@
           </div>
         </div>
       </section>
+
+      <!-- Statistics Section -->
+      <section class="stats-section fade-in-up">
+        <div class="stats-container">
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <div class="stat-content">
+              <div class="stat-number" data-target="50000">0</div>
+              <div class="stat-label">Khách hàng hài lòng</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-wifi"></i>
+            </div>
+            <div class="stat-content">
+              <div class="stat-number" data-target="99">0</div>
+              <div class="stat-label">% Uptime</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="stat-content">
+              <div class="stat-number" data-target="48">0</div>
+              <div class="stat-label">Điểm đánh giá</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="stat-content">
+              <div class="stat-number" data-target="24">0</div>
+              <div class="stat-label">Giờ hỗ trợ</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section class="testimonials-section fade-in-up">
+        <h2>Khách hàng nói gì về chúng tôi</h2>
+        <p class="subtitle">
+          Những đánh giá chân thực từ khách hàng đã sử dụng dịch vụ
+        </p>
+
+        <div class="testimonials-grid">
+          <div class="testimonial">
+            <div class="testimonial-content">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p>
+                "Dịch vụ rất tốt, tốc độ internet ổn định, nhân viên phục vụ
+                nhiệt tình. Tôi rất hài lòng với FPT Telecom!"
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="author-info">
+                <h4>Nguyễn Văn A</h4>
+                <span>Khách hàng tại Quy Nhơn</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <div class="testimonial-content">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p>
+                "Camera an ninh chất lượng cao, dễ sử dụng. Gói combo rất tiết
+                kiệm và phù hợp với gia đình tôi."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="author-info">
+                <h4>Trần Thị B</h4>
+                <span>Khách hàng tại Tuy Phước</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <div class="testimonial-content">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p>
+                "Hỗ trợ kỹ thuật nhanh chóng, lắp đặt chuyên nghiệp. Tốc độ
+                internet đúng như cam kết, rất ổn định."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="author-info">
+                <h4>Lê Văn C</h4>
+                <span>Khách hàng tại An Nhơn</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- News & Updates Section -->
+      <section class="news-section fade-in-up">
+        <h2>Tin tức & Cập nhật</h2>
+        <p class="subtitle">
+          Những thông tin mới nhất về dịch vụ và khuyến mãi
+        </p>
+
+        <div class="news-grid">
+          <article class="news-card">
+            <div class="news-image">
+              <i class="fas fa-newspaper"></i>
+            </div>
+            <div class="news-content">
+              <div class="news-meta">
+                <span class="news-date">15/12/2024</span>
+                <span class="news-category">Khuyến mãi</span>
+              </div>
+              <h3>Khuyến mãi đặc biệt tháng 12</h3>
+              <p>
+                Giảm giá 20% cho tất cả gói combo camera an ninh, áp dụng đến
+                hết tháng 12/2024.
+              </p>
+              <a href="#" class="read-more"
+                >Đọc thêm <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <div class="news-image">
+              <i class="fas fa-wifi"></i>
+            </div>
+            <div class="news-content">
+              <div class="news-meta">
+                <span class="news-date">10/12/2024</span>
+                <span class="news-category">Công nghệ</span>
+              </div>
+              <h3>Nâng cấp hạ tầng mạng</h3>
+              <p>
+                FPT Telecom đã nâng cấp hạ tầng mạng tại Bình Định, tăng tốc độ
+                và ổn định kết nối.
+              </p>
+              <a href="#" class="read-more"
+                >Đọc thêm <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </article>
+
+          <article class="news-card">
+            <div class="news-image">
+              <i class="fas fa-camera"></i>
+            </div>
+            <div class="news-content">
+              <div class="news-meta">
+                <span class="news-date">05/12/2024</span>
+                <span class="news-category">Sản phẩm</span>
+              </div>
+              <h3>Camera Play4 mới ra mắt</h3>
+              <p>
+                Camera an ninh Play4 với công nghệ AI mới nhất, chất lượng hình
+                ảnh 4K sắc nét.
+              </p>
+              <a href="#" class="read-more"
+                >Đọc thêm <i class="fas fa-arrow-right"></i
+              ></a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="cta-section fade-in-up">
+        <div class="cta-content">
+          <h2>Sẵn sàng trải nghiệm dịch vụ tốt nhất?</h2>
+          <p>
+            Đăng ký ngay hôm nay để nhận ưu đãi đặc biệt và tư vấn miễn phí từ
+            đội ngũ chuyên nghiệp của chúng tôi.
+          </p>
+          <div class="cta-buttons">
+            <a href="lienhe.html" class="btn btn-primary btn-large">
+              <i class="fas fa-phone"></i>
+              Đăng ký ngay
+            </a>
+            <a href="tel:19006600" class="btn btn-secondary btn-large">
+              <i class="fas fa-headset"></i>
+              Gọi tư vấn: 1900 6600
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <footer>
-      <div class="footer-content">
-        <div class="map-container">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3874.506596850438!2d109.2204904!3d13.7737621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x316f6d2e2ac55525%3A0x7229e202dcbfc053!2sL%E1%BA%AFp%20%C4%91%E1%BA%B7t%20Internet%20FPT%20-%20Camera%20FPT%20B%C3%ACnh%20%C4%90%E1%BB%8Bnh!5e0!3m2!1svi!2s"
-            width="100%"
-            height="350"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-        <div class="footer-top">
-          <div class="footer-column about">
-            <img src="LogoFPT.png" alt="FPT Telecom Logo" class="footer-logo" />
-            <p>
-              FPT Telecom - Nhà cung cấp dịch vụ viễn thông hàng đầu Việt Nam,
-              luôn tiên phong đổi mới và mang đến những trải nghiệm kết nối
-              tuyệt vời.
-            </p>
-          </div>
-          <div class="footer-column links">
-            <h4>Về chúng tôi</h4>
-            <ul>
-              <li><a href="index.html">Trang chủ</a></li>
-              <li><a href="products.html">Sản phẩm</a></li>
-              <li><a href="combo.html">Combo</a></li>
-              <li><a href="lienhe.html">Liên hệ</a></li>
-            </ul>
-          </div>
-          <div class="footer-column links">
-            <h4>Dịch vụ</h4>
-            <ul>
-              <li><a href="product-internet.html">Internet FPT</a></li>
-              <li><a href="product-truyenhinh.html">Truyền hình FPT</a></li>
-              <li><a href="product-camera.html">FPT Camera</a></li>
-            </ul>
-          </div>
-          <div class="footer-column contact">
-            <h4>Liên hệ</h4>
-            <p>
-              90B Tây Sơn, P. Nguyễn Văn Cừ, TP. Quy Nhơn, Bình Định<br />
-              <strong>Phone:</strong> 1900 6600<br />
-              <strong>Email:</strong> hotrokh@fpt.vn<br />
-            </p>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <!-- Include Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Floating Action Buttons -->
+    <div class="zalo-chat">
+      <a href="https://zalo.me/your-zalo-id" target="_blank">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Zalo_logo.svg"
+          alt="Chat Zalo"
+        />
+      </a>
+    </div>
+
+    <a href="tel:19006600" class="call-now">
+      <i class="fas fa-phone"></i>
+    </a>
 
     <!-- JavaScript for animations -->
     <script>
+      // Load header and footer
+      fetch("header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-placeholder").innerHTML = data;
+        });
+
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-placeholder").innerHTML = data;
+        });
+
       // Intersection Observer for fade-in animations
       const observerOptions = {
         threshold: 0.1,
@@ -386,6 +701,59 @@
           this.currentTime = 5.5;
           this.play();
         });
+      }
+
+      // Animated counter for statistics
+      function animateCounter(element, target, duration = 2000) {
+        let start = 0;
+        const increment = target / (duration / 16);
+
+        const timer = setInterval(() => {
+          start += increment;
+          if (start >= target) {
+            element.textContent = target;
+            clearInterval(timer);
+          } else {
+            element.textContent = Math.floor(start);
+          }
+        }, 16);
+      }
+
+      // Observe statistics for animation
+      const statsObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const statNumber = entry.target.querySelector(".stat-number");
+              const target = parseInt(statNumber.getAttribute("data-target"));
+              animateCounter(statNumber, target);
+              statsObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.5 }
+      );
+
+      document.querySelectorAll(".stat-card").forEach((card) => {
+        statsObserver.observe(card);
+      });
+
+      // Testimonial carousel (simple version)
+      let currentTestimonial = 0;
+      const testimonials = document.querySelectorAll(".testimonial");
+
+      function showTestimonial(index) {
+        testimonials.forEach((testimonial, i) => {
+          testimonial.style.display = i === index ? "block" : "none";
+        });
+      }
+
+      // Auto-rotate testimonials on mobile
+      if (window.innerWidth <= 768) {
+        setInterval(() => {
+          currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+          showTestimonial(currentTestimonial);
+        }, 5000);
       }
     </script>
   </body>

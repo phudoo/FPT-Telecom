@@ -312,7 +312,7 @@ footer a:hover {
   color: var(--primary-light);
 }
 
-/* Responsive Design */
+/* Responsive Design - Giữ nguyên layout */
 @media (max-width: 1200px) {
   .product-list {
     gap: var(--spacing-lg);
@@ -322,13 +322,10 @@ footer a:hover {
 @media (max-width: 900px) {
   header {
     padding: var(--spacing-md) var(--spacing-lg);
-    flex-direction: column;
-    gap: var(--spacing-md);
   }
   
   nav {
-    flex-wrap: wrap;
-    justify-content: center;
+    gap: var(--spacing-md);
   }
   
   main {
@@ -336,12 +333,7 @@ footer a:hover {
   }
   
   .product-list {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .product-card {
-    width: 90%;
+    gap: var(--spacing-lg);
   }
 }
 

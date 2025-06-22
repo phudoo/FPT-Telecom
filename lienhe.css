@@ -321,17 +321,14 @@ footer a:hover {
   color: var(--primary-light);
 }
 
-/* Responsive Design */
+/* Responsive Design - Giữ nguyên layout */
 @media (max-width: 900px) {
   header {
     padding: var(--spacing-md) var(--spacing-lg);
-    flex-direction: column;
-    gap: var(--spacing-md);
   }
   
   nav {
-    flex-wrap: wrap;
-    justify-content: center;
+    gap: var(--spacing-md);
   }
   
   main {
@@ -349,13 +346,10 @@ footer a:hover {
   
   .contact-info li {
     padding: var(--spacing-md);
-    flex-direction: column;
-    text-align: center;
   }
   
   .contact-info li img {
-    margin-right: 0;
-    margin-bottom: var(--spacing-sm);
+    margin-right: var(--spacing-md);
   }
   
   form {

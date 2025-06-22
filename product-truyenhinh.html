@@ -10,16 +10,14 @@
     <meta property="og:url" content="https://fpt.vn/product-truyenhinh" />
     <title>Truyền hình FPT - Giải trí thông minh</title>
     <link rel="stylesheet" href="product-truyenhinh.css" />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="footer.css" />
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/2/2f/FPT_logo_2010.svg" />
   </head>
   <body>
-    <header>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/FPT_logo_2010.svg" alt="FPT Telecom Logo" class="logo" />
-      <nav aria-label="Main navigation">
-        <a href="index.html">Trang chủ</a> | <a href="products.html">Sản phẩm</a> | <a href="combo.html">Combo</a> |
-        <a href="baogia.html">Báo giá</a> | <a href="lienhe.html">Liên hệ</a>
-      </nav>
-    </header>
+    <!-- Include Header -->
+    <div id="header-placeholder"></div>
+
     <main>
       <h1>Truyền hình FPT - Giải trí thông minh</h1>
       <div style="display:flex;flex-wrap:wrap;gap:32px;align-items:center;justify-content:center;margin-bottom:32px;">
@@ -94,13 +92,23 @@
         <a href="lienhe.html" class="btn" style="font-size:1.1rem;">Nhận tư vấn miễn phí</a>
       </div>
     </main>
-    <footer>
-      <div style="text-align:center;margin-bottom:8px;">
-        <a href="https://www.facebook.com/FPTTelecom" target="_blank" aria-label="Facebook FPT Telecom" style="margin:0 8px;"><img src="https://cdn-icons-png.flaticon.com/128/733/733547.png" width="28" alt="Facebook"></a>
-        <a href="https://zalo.me/18006601" target="_blank" aria-label="Zalo FPT Telecom" style="margin:0 8px;"><img src="https://cdn-icons-png.flaticon.com/128/2111/2111728.png" width="28" alt="Zalo"></a>
-        <a href="https://www.youtube.com/user/FptTelecomOnline" target="_blank" aria-label="YouTube FPT Telecom" style="margin:0 8px;"><img src="https://cdn-icons-png.flaticon.com/128/1384/1384060.png" width="28" alt="YouTube"></a>
-      </div>
-      <p>&copy; 2025 FPT Telecom. All rights reserved.</p>
-    </footer>
+
+    <!-- Include Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+      // Load header and footer
+      fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('header-placeholder').innerHTML = data;
+        });
+
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-placeholder').innerHTML = data;
+        });
+    </script>
   </body>
 </html> 
