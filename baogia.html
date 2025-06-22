@@ -17,6 +17,63 @@
     <link rel="stylesheet" href="header.css" />
     <link rel="stylesheet" href="footer.css" />
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/2/2f/FPT_logo_2010.svg" />
+    <style>
+      .tab-navigation {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        margin: 32px 0 24px 0;
+        flex-wrap: wrap;
+      }
+      
+      .tab-btn {
+        padding: 12px 24px;
+        font-size: 1rem;
+        border: none;
+        border-bottom: 3px solid transparent;
+        background: none;
+        cursor: pointer;
+        font-weight: 600;
+        color: #666;
+        outline: none;
+        transition: all 0.3s ease;
+        border-radius: 8px 8px 0 0;
+      }
+      
+      .tab-btn.active {
+        color: #ff6f1a;
+        border-bottom: 3px solid #ff6f1a;
+        background: rgba(255, 111, 26, 0.05);
+      }
+      
+      .tab-btn:hover {
+        color: #ff6f1a;
+        background: rgba(255, 111, 26, 0.05);
+      }
+      
+      .tab-content {
+        display: none;
+      }
+      
+      .tab-content.active {
+        display: block;
+      }
+      
+      .section-title {
+        color: #1877f2;
+        margin-top: 40px;
+        border-bottom: 2px solid #1877f2;
+        padding-bottom: 8px;
+        font-size: 1.5rem;
+      }
+      
+      .section-title.internet { color: #1877f2; border-bottom-color: #1877f2; }
+      .section-title.combo { color: #ff6f1a; border-bottom-color: #ff6f1a; }
+      .section-title.game { color: #1a73e8; border-bottom-color: #1a73e8; }
+      .section-title.tv { color: #ff6f1a; border-bottom-color: #ff6f1a; }
+      .section-title.camera { color: #1a73e8; border-bottom-color: #1a73e8; }
+      .section-title.smarthome { color: #1a73e8; border-bottom-color: #1a73e8; }
+    </style>
   </head>
   <body>
     <!-- Include Header -->
@@ -24,41 +81,390 @@
 
     <main>
       <h1>Báo giá dịch vụ FPT Telecom</h1>
-      <table>
-        <tr>
-          <th>Gói</th>
-          <th>Tốc độ</th>
-          <th>Giá/tháng</th>
-          <th>Khuyến mãi</th>
-        </tr>
-        <tr>
-          <td><b>GIGA</b></td>
-          <td>300 Mbps</td>
-          <td style="color:#ff6f1a;font-weight:bold;">250.000đ</td>
-          <td><span class="badge">Tặng modem Wi-Fi 6</span></td>
-        </tr>
-        <tr>
-          <td><b>SKY</b></td>
-          <td>1 Gbps</td>
-          <td style="color:#ff6f1a;font-weight:bold;">320.000đ</td>
-          <td><span class="badge">Tặng modem Wi-Fi 6</span></td>
-        </tr>
-        <tr>
-          <td><b>Combo Giải trí</b></td>
-          <td>300 Mbps</td>
-          <td style="color:#ff6f1a;font-weight:bold;">370.000đ</td>
-          <td><span class="badge">Tặng FPT Play Box</span></td>
-        </tr>
-        <tr>
-          <td><b>Combo Camera</b></td>
-          <td>300 Mbps</td>
-          <td style="color:#ff6f1a;font-weight:bold;">420.000đ</td>
-          <td><span class="badge">Tặng Camera Play 4</span></td>
-        </tr>
-      </table>
-      <div style="text-align:center;margin-top:24px;">
+      
+      <!-- Tab Navigation -->
+      <div class="tab-navigation">
+        <button class="tab-btn active" onclick="showTab('internet')">
+          Internet
+        </button>
+        <button class="tab-btn" onclick="showTab('combo')">
+          Combo Giải trí
+        </button>
+        <button class="tab-btn" onclick="showTab('game')">
+          Game & Meta
+        </button>
+        <button class="tab-btn" onclick="showTab('tv')">
+          Truyền hình
+        </button>
+        <button class="tab-btn" onclick="showTab('camera')">
+          Camera
+        </button>
+        <button class="tab-btn" onclick="showTab('smarthome')">
+          Smart Home
+        </button>
+      </div>
+
+      <!-- Tab 1: Internet -->
+      <div id="internet-tab" class="tab-content active">
+        <h2 class="section-title internet">Internet Cá nhân & Gia đình</h2>
+        <table>
+          <tr>
+            <th>Gói</th>
+            <th>Tốc độ</th>
+            <th>Giá/tháng</th>
+            <th>Khuyến mãi</th>
+          </tr>
+          <tr>
+            <td><b>Internet GIGA</b></td>
+            <td>300 Mbps</td>
+            <td style="color:#ff6f1a;font-weight:bold;">180.000đ</td>
+            <td><span class="badge">Modem Wi-Fi 6</span></td>
+          </tr>
+          <tr>
+            <td><b>Internet SKY</b></td>
+            <td>1 Gbps</td>
+            <td style="color:#ff6f1a;font-weight:bold;">190.000đ</td>
+            <td><span class="badge">Modem Wi-Fi 6</span></td>
+          </tr>
+          <tr>
+            <td><b>FPT An Tâm</b></td>
+            <td>300 Mbps</td>
+            <td style="color:#ff6f1a;font-weight:bold;">195.000đ</td>
+            <td><span class="badge">Chặn web độc hại</span></td>
+          </tr>
+          <tr>
+            <td><b>Internet Giga F1</b></td>
+            <td>300 Mbps</td>
+            <td style="color:#ff6f1a;font-weight:bold;">190.000đ</td>
+            <td><span class="badge">Tặng 2 Wi-Fi Mesh</span></td>
+          </tr>
+          <tr>
+            <td><b>Internet Meta F1</b></td>
+            <td>1 Gbps</td>
+            <td style="color:#ff6f1a;font-weight:bold;">305.000đ</td>
+            <td><span class="badge">Tặng 1 Wi-Fi Mesh</span></td>
+          </tr>
+          <tr>
+            <td><b>Internet Meta F2</b></td>
+            <td>1 Gbps</td>
+            <td style="color:#ff6f1a;font-weight:bold;">325.000đ</td>
+            <td><span class="badge">Tặng 2 Wi-Fi Mesh</span></td>
+          </tr>
+          <tr>
+            <td><b>Internet Meta F3</b></td>
+            <td>1 Gbps</td>
+            <td style="color:#ff6f1a;font-weight:bold;">355.000đ</td>
+            <td><span class="badge">Tặng 3 Wi-Fi Mesh</span></td>
+          </tr>
+          <tr>
+            <td><b>Internet Sky F1</b></td>
+            <td>1 Gbps</td>
+            <td style="color:#ff6f1a;font-weight:bold;">210.000đ</td>
+            <td><span class="badge">Tặng 1 Wi-Fi Mesh</span></td>
+          </tr>
+          <tr>
+            <td><b>Internet Sky F2</b></td>
+            <td>1 Gbps</td>
+            <td style="color:#ff6f1a;font-weight:bold;">230.000đ</td>
+            <td><span class="badge">Tặng 2 Wi-Fi Mesh</span></td>
+          </tr>
+          <tr>
+            <td><b>Internet Sky F3</b></td>
+            <td>1 Gbps</td>
+            <td style="color:#ff6f1a;font-weight:bold;">250.000đ</td>
+            <td><span class="badge">Tặng 3 Wi-Fi Mesh</span></td>
+          </tr>
+          <tr>
+            <td><b>Internet Giga F2</b></td>
+            <td>300 Mbps</td>
+            <td style="color:#ff6f1a;font-weight:bold;">220.000đ</td>
+            <td><span class="badge">Tặng 2 Wi-Fi Mesh</span></td>
+          </tr>
+          <tr>
+            <td><b>Internet Giga F3</b></td>
+            <td>300 Mbps</td>
+            <td style="color:#ff6f1a;font-weight:bold;">240.000đ</td>
+            <td><span class="badge">Tặng 3 Wi-Fi Mesh</span></td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Tab 2: Combo Giải trí -->
+      <div id="combo-tab" class="tab-content">
+        <h2 class="section-title combo">Combo Giải trí & Gia đình</h2>
+        <table>
+          <tr>
+            <th>Gói</th>
+            <th>Tốc độ</th>
+            <th>Giá/tháng</th>
+            <th>Khuyến mãi</th>
+          </tr>
+          <tr>
+            <td><b>Combo Giải trí</b></td>
+            <td>300 Mbps</td>
+            <td style="color:#ff6f1a;font-weight:bold;">200.000đ</td>
+            <td><span class="badge">FPT Play Box</span></td>
+          </tr>
+          <tr>
+            <td><b>Combo An Tâm</b></td>
+            <td>300 Mbps</td>
+            <td style="color:#ff6f1a;font-weight:bold;">245.000đ</td>
+            <td><span class="badge">FPT Play Box + An toàn</span></td>
+          </tr>
+          <tr>
+            <td><b>Combo GIGA</b></td>
+            <td>300 Mbps</td>
+            <td style="color:#ff6f1a;font-weight:bold;">230.000đ</td>
+            <td><span class="badge">FPT Play Box</span></td>
+          </tr>
+          <tr>
+            <td><b>Combo SKY</b></td>
+            <td>1 Gbps</td>
+            <td style="color:#ff6f1a;font-weight:bold;">230.000đ</td>
+            <td><span class="badge">FPT Play Box</span></td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Tab 3: Game & Meta -->
+      <div id="game-tab" class="tab-content">
+        <h2 class="section-title game">Internet & Combo Game, Meta</h2>
+        <table>
+          <tr>
+            <th>Gói</th>
+            <th>Tốc độ</th>
+            <th>Giá/tháng</th>
+            <th>Khuyến mãi</th>
+          </tr>
+          <tr>
+            <td><b>Gói F-Game</b></td>
+            <td>300 Mbps</td>
+            <td style="color:#ff6f1a;font-weight:bold;">230.000đ</td>
+            <td><span class="badge">Ultra Fast 50+ game</span></td>
+          </tr>
+          <tr>
+            <td><b>Combo F-Game</b></td>
+            <td>300 Mbps</td>
+            <td style="color:#ff6f1a;font-weight:bold;">280.000đ</td>
+            <td><span class="badge">FPT Play Box + Ultra Fast</span></td>
+          </tr>
+          <tr>
+            <td><b>Internet META</b></td>
+            <td>1 Gbps</td>
+            <td style="color:#ff6f1a;font-weight:bold;">295.000đ</td>
+            <td><span class="badge">Modem Wi-Fi 6</span></td>
+          </tr>
+          <tr>
+            <td><b>Combo META</b></td>
+            <td>1 Gbps</td>
+            <td style="color:#ff6f1a;font-weight:bold;">330.000đ</td>
+            <td><span class="badge">FPT Play Box</span></td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Tab 4: Truyền hình -->
+      <div id="tv-tab" class="tab-content">
+        <h2 class="section-title tv">Truyền hình FPT</h2>
+        <table>
+          <tr>
+            <th>Gói</th>
+            <th>Nội dung</th>
+            <th>Giá/tháng</th>
+            <th>Khuyến mãi</th>
+          </tr>
+          <tr>
+            <td><b>FPT Play Cine</b></td>
+            <td>Phim bộ, thiếu nhi, âm nhạc</td>
+            <td style="color:#ff6f1a;font-weight:bold;">33.000đ</td>
+            <td><span class="badge">2 thiết bị xem</span></td>
+          </tr>
+          <tr>
+            <td><b>FPT Play Premium</b></td>
+            <td>100+ kênh + thể thao + phim</td>
+            <td style="color:#ff6f1a;font-weight:bold;">66.000đ</td>
+            <td><span class="badge">3 thiết bị xem</span></td>
+          </tr>
+          <tr>
+            <td><b>Gói K+</b></td>
+            <td>5 kênh K+ + Ngoại hạng Anh</td>
+            <td style="color:#ff6f1a;font-weight:bold;">179.000đ</td>
+            <td><span class="badge">Thể thao độc quyền</span></td>
+          </tr>
+          <tr>
+            <td><b>Combo Premium K+</b></td>
+            <td>Premium + K+ toàn bộ</td>
+            <td style="color:#ff6f1a;font-weight:bold;">219.000đ</td>
+            <td><span class="badge">Tất cả nội dung</span></td>
+          </tr>
+          <tr>
+            <td><b>FPT Play Box</b></td>
+            <td>Thiết bị xem truyền hình</td>
+            <td style="color:#ff6f1a;font-weight:bold;">90.000đ</td>
+            <td><span class="badge">Kho phim đa dạng</span></td>
+          </tr>
+          <tr>
+            <td><b>Combo Giải trí</b></td>
+            <td>FPT Play Box + Internet</td>
+            <td style="color:#ff6f1a;font-weight:bold;">370.000đ</td>
+            <td><span class="badge">Tặng FPT Play Box</span></td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Tab 5: Camera -->
+      <div id="camera-tab" class="tab-content">
+        <h2 class="section-title camera">Camera FPT</h2>
+        <table>
+          <tr>
+            <th>Gói</th>
+            <th>Thiết bị</th>
+            <th>Giá</th>
+            <th>Khuyến mãi</th>
+          </tr>
+          <tr>
+            <td><b>Combo 2 Camera Play4</b></td>
+            <td>2 Camera Play 4 (indoor)</td>
+            <td style="color:#ff6f1a;font-weight:bold;">1.100.000đ</td>
+            <td><span class="badge">Cloud 3 ngày</span></td>
+          </tr>
+          <tr>
+            <td><b>Combo 2 Camera IQ4S</b></td>
+            <td>2 Camera IQ4S (outdoor)</td>
+            <td style="color:#ff6f1a;font-weight:bold;">1.100.000đ</td>
+            <td><span class="badge">Cloud 3 ngày</span></td>
+          </tr>
+          <tr>
+            <td><b>Combo 2 Camera Mix</b></td>
+            <td>1 Play4 + 1 IQ4S</td>
+            <td style="color:#ff6f1a;font-weight:bold;">1.100.000đ</td>
+            <td><span class="badge">Cloud 3 ngày</span></td>
+          </tr>
+          <tr>
+            <td><b>Combo 3 Camera</b></td>
+            <td>1 Play4 + 2 IQ4S</td>
+            <td style="color:#ff6f1a;font-weight:bold;">1.500.000đ</td>
+            <td><span class="badge">Cloud 3 ngày</span></td>
+          </tr>
+          <tr>
+            <td><b>Combo 5 Camera</b></td>
+            <td>2 Play4 + 3 IQ4S</td>
+            <td style="color:#ff6f1a;font-weight:bold;">2.300.000đ</td>
+            <td><span class="badge">Cloud 3 ngày</span></td>
+          </tr>
+        </table>
+
+        <h2 class="section-title camera" style="margin-top:40px;">Combo Internet + Camera</h2>
+        <table>
+          <tr>
+            <th>Gói</th>
+            <th>Tốc độ</th>
+            <th>Giá/tháng</th>
+            <th>Khuyến mãi</th>
+          </tr>
+          <tr>
+            <td><b>SkyEyes3 - IQ4S</b></td>
+            <td>1 Gbps</td>
+            <td style="color:#ff6f1a;font-weight:bold;">230.000đ</td>
+            <td><span class="badge">Camera IQ4S + Cloud 3 ngày</span></td>
+          </tr>
+          <tr>
+            <td><b>SkyEyes3 - Play3</b></td>
+            <td>1 Gbps</td>
+            <td style="color:#ff6f1a;font-weight:bold;">230.000đ</td>
+            <td><span class="badge">Camera Play3 + Cloud 3 ngày</span></td>
+          </tr>
+          <tr>
+            <td><b>GigaEyes7 - Play4</b></td>
+            <td>300 Mbps</td>
+            <td style="color:#ff6f1a;font-weight:bold;">260.000đ</td>
+            <td><span class="badge">Camera Play4 + Cloud 7 ngày</span></td>
+          </tr>
+          <tr>
+            <td><b>GigaEyes7 - IQ4S</b></td>
+            <td>300 Mbps</td>
+            <td style="color:#ff6f1a;font-weight:bold;">260.000đ</td>
+            <td><span class="badge">Camera IQ4S + Cloud 7 ngày</span></td>
+          </tr>
+          <tr>
+            <td><b>GigaEyes3 - Play4</b></td>
+            <td>300 Mbps</td>
+            <td style="color:#ff6f1a;font-weight:bold;">220.000đ</td>
+            <td><span class="badge">Camera Play4 + Cloud 3 ngày</span></td>
+          </tr>
+          <tr>
+            <td><b>GigaEyes3 - IQ4S</b></td>
+            <td>300 Mbps</td>
+            <td style="color:#ff6f1a;font-weight:bold;">220.000đ</td>
+            <td><span class="badge">Camera IQ4S + Cloud 3 ngày</span></td>
+          </tr>
+          <tr>
+            <td><b>Triple GigaEyes3 Play4 - FPT Play</b></td>
+            <td>300 Mbps</td>
+            <td style="color:#ff6f1a;font-weight:bold;">270.000đ</td>
+            <td><span class="badge">Camera + FPT Play Box</span></td>
+          </tr>
+          <tr>
+            <td><b>Triple GigaEyes3 IQ4S - FPT Play</b></td>
+            <td>300 Mbps</td>
+            <td style="color:#ff6f1a;font-weight:bold;">270.000đ</td>
+            <td><span class="badge">Camera + FPT Play Box</span></td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Tab 6: Smart Home -->
+      <div id="smarthome-tab" class="tab-content">
+        <h2 class="section-title smarthome">FPT Smart Home</h2>
+        <table>
+          <tr>
+            <th>Thiết bị</th>
+            <th>Mô tả</th>
+            <th>Giá</th>
+            <th>Tính năng</th>
+          </tr>
+          <tr>
+            <td><b>Điều khiển hồng ngoại</b></td>
+            <td>Điều khiển thiết bị từ xa</td>
+            <td style="color:#ff6f1a;font-weight:bold;">Liên hệ</td>
+            <td><span class="badge">Điều khiển TV, AC</span></td>
+          </tr>
+          <tr>
+            <td><b>Ổ cắm thông minh Wifi</b></td>
+            <td>Ổ cắm điều khiển qua app</td>
+            <td style="color:#ff6f1a;font-weight:bold;">Liên hệ</td>
+            <td><span class="badge">Bật/tắt từ xa</span></td>
+          </tr>
+          <tr>
+            <td><b>Cảm biến hiện diện Athena AC</b></td>
+            <td>Cảm biến chuyển động âm trần</td>
+            <td style="color:#ff6f1a;font-weight:bold;">Liên hệ</td>
+            <td><span class="badge">Phát hiện chuyển động</span></td>
+          </tr>
+          <tr>
+            <td><b>Cảm biến khói Athena</b></td>
+            <td>Cảm biến khói thông minh</td>
+            <td style="color:#ff6f1a;font-weight:bold;">Liên hệ</td>
+            <td><span class="badge">Báo cháy tự động</span></td>
+          </tr>
+          <tr>
+            <td><b>Công tắc cảm ứng 4 nút Leto</b></td>
+            <td>Công tắc cảm ứng chữ nhật</td>
+            <td style="color:#ff6f1a;font-weight:bold;">Liên hệ</td>
+            <td><span class="badge">Điều khiển 4 thiết bị</span></td>
+          </tr>
+          <tr>
+            <td><b>Công tắc cửa cuốn Leto</b></td>
+            <td>Công tắc cửa cuốn thông minh</td>
+            <td style="color:#ff6f1a;font-weight:bold;">Liên hệ</td>
+            <td><span class="badge">Điều khiển cửa cuốn</span></td>
+          </tr>
+        </table>
+      </div>
+
+      <div style="text-align:center;margin-top:40px;">
         <a href="lienhe.html" class="btn" style="font-size:1.1rem;">Liên hệ tư vấn & nhận ưu đãi</a>
-        <p style="margin-top:12px;">Hotline: <b>1800 6601</b></p>
+        <p style="margin-top:12px;">Hotline: <b>0986720623</b></p>
       </div>
     </main>
 
@@ -78,6 +484,27 @@
         .then(data => {
           document.getElementById('footer-placeholder').innerHTML = data;
         });
+
+      // Tab system
+      function showTab(tabName) {
+        // Hide all tab contents
+        const tabContents = document.querySelectorAll('.tab-content');
+        tabContents.forEach(content => {
+          content.classList.remove('active');
+        });
+
+        // Remove active class from all tab buttons
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        tabButtons.forEach(button => {
+          button.classList.remove('active');
+        });
+
+        // Show selected tab content
+        document.getElementById(tabName + '-tab').classList.add('active');
+
+        // Add active class to clicked button
+        event.target.classList.add('active');
+      }
     </script>
   </body>
 </html> 

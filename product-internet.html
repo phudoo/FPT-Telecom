@@ -2,396 +2,665 @@
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=800" />
-    <meta name="description" content="Internet FPT - Cáp quang tốc độ cao cho cá nhân, gia đình, game thủ, doanh nghiệp. Đăng ký lắp đặt Internet FPT ngay hôm nay!" />
+    <meta name="viewport" content="width=1100" />
+    <meta
+      name="description"
+      content="Internet FPT - Cáp quang tốc độ cao cho cá nhân, gia đình, game thủ, doanh nghiệp. Đăng ký lắp đặt Internet FPT ngay hôm nay!"
+    />
     <meta property="og:title" content="Internet FPT - Cáp quang tốc độ cao" />
-    <meta property="og:description" content="Internet FPT - Cáp quang tốc độ cao cho cá nhân, gia đình, game thủ, doanh nghiệp. Đăng ký lắp đặt Internet FPT ngay hôm nay!" />
-    <meta property="og:image" content="https://cdn-icons-png.flaticon.com/512/1041/1041916.png" />
+    <meta
+      property="og:description"
+      content="Internet FPT - Cáp quang tốc độ cao cho cá nhân, gia đình, game thủ, doanh nghiệp. Đăng ký lắp đặt Internet FPT ngay hôm nay!"
+    />
+    <meta
+      property="og:image"
+      content="https://cdn-icons-png.flaticon.com/512/1041/1041916.png"
+    />
     <meta property="og:url" content="https://fpt.vn/product-internet" />
     <title>Internet FPT - Cáp quang tốc độ cao</title>
-    <link rel="stylesheet" href="product-internet.css" />
     <link rel="stylesheet" href="header.css" />
     <link rel="stylesheet" href="footer.css" />
-    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/2/2f/FPT_logo_2010.svg" />
-    <style>
-      .internet-types { display: flex; flex-wrap: wrap; gap: 32px; justify-content: center; margin: 32px 0; }
-      .internet-type { background: #fff; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); width: 270px; padding: 28px 18px 22px 18px; display: flex; flex-direction: column; align-items: center; transition: box-shadow 0.2s, transform 0.2s; }
-      .internet-type:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.13); transform: translateY(-6px) scale(1.03); }
-      .internet-type img { width: 70px; height: 70px; object-fit: contain; margin-bottom: 14px; }
-      .internet-type h3 { font-size: 1.1rem; margin: 0 0 8px 0; text-align: center; }
-      .internet-type ul { font-size: 0.98rem; margin: 0 0 10px 0; padding-left: 18px; }
-      .internet-type p { color: #555; font-size: 0.98rem; text-align: center; margin-bottom: 10px; }
-      @media (max-width: 900px) { .internet-types { flex-direction: column; align-items: center; } .internet-type { width: 90%; } }
-    </style>
+    <link rel="stylesheet" href="product-internet.css" />
+    <link
+      rel="icon"
+      href="https://upload.wikimedia.org/wikipedia/commons/2/2f/FPT_logo_2010.svg"
+    />
   </head>
   <body>
     <!-- Include Header -->
     <div id="header-placeholder"></div>
 
+    <!-- Back to Products Button -->
+    <div style="max-width: 1400px; margin: 0 auto; padding: 16px 24px">
+      <a
+        href="products.html"
+        class="back-btn"
+        style="
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          color: #ff6f1a;
+          text-decoration: none;
+          font-weight: 600;
+          font-size: 0.95rem;
+          padding: 8px 16px;
+          border: 2px solid #ff6f1a;
+          border-radius: 8px;
+          transition: all 0.3s ease;
+        "
+      >
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M19 12H5M12 19l-7-7 7-7" />
+        </svg>
+        Quay lại trang sản phẩm
+      </a>
+    </div>
+
     <main>
       <h1>Internet FPT - Cáp quang tốc độ cao</h1>
-      <h2>Internet cá nhân & Gia đình</h2>
-      <div class="internet-types">
-        <div class="internet-type">
-          <img src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png" alt="Internet GIGA" />
-          <h3>Internet GIGA</h3>
-          <p style="font-weight:bold;color:#1877f2;">Chỉ từ 180.000đ/tháng</p>
-          <ul>
-            <li>Modem Wi-Fi 6</li>
-            <li>Tốc độ lên đến 300 Mbps</li>
-            <li>Phù hợp cho ≥3 thiết bị kết nối</li>
-          </ul>
-          <a href="lienhe.html" class="btn">Đăng ký ngay</a>
+
+      <!-- Tab Navigation -->
+      <div class="tab-navigation">
+        <button class="tab-btn active" onclick="showTab('personal')">
+          Internet cá nhân & Gia đình
+        </button>
+        <button class="tab-btn" onclick="showTab('combo')">
+          Combo Giải trí & Gia đình
+        </button>
+        <button class="tab-btn" onclick="showTab('game')">
+          Internet & Combo Game, Meta
+        </button>
+        <button class="tab-btn" onclick="showTab('mesh')">
+          Internet Mesh/Meta/Sky/Giga F-series
+        </button>
+      </div>
+
+      <!-- Tab 1: Internet cá nhân & Gia đình -->
+      <div id="personal-tab" class="tab-content active">
+        <h2>Internet cá nhân & Gia đình</h2>
+        <div class="package-navigation">
+          <button class="nav-btn" onclick="changePage('personal', -1)">
+            ← Trước
+          </button>
+          <span class="page-indicator"
+            >Trang <span id="personal-page">1</span> /
+            <span id="personal-total">3</span></span
+          >
+          <button class="nav-btn" onclick="changePage('personal', 1)">
+            Sau →
+          </button>
         </div>
-        <div class="internet-type">
-          <img src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png" alt="Internet SKY" />
-          <h3>Internet SKY</h3>
-          <p style="font-weight:bold;color:#1877f2;">Chỉ từ 190.000đ/tháng</p>
-          <ul>
-            <li>Modem Wi-Fi 6</li>
-            <li>Tốc độ Download lên đến 1 Gbps</li>
-            <li>Phù hợp cho ≥8 thiết bị kết nối</li>
-          </ul>
-          <a href="lienhe.html" class="btn">Đăng ký ngay</a>
+
+        <div id="personal-container-1" class="package-container active">
+          <div class="internet-types">
+            <div class="internet-type">
+              <img src="internetGiga.png" alt="Internet GIGA" />
+              <h3>Internet GIGA</h3>
+              <p style="font-weight: bold; color: #1877f2">
+                Chỉ từ 180.000đ/tháng
+              </p>
+              <ul>
+                <li>Modem Wi-Fi 6</li>
+                <li>Tốc độ lên đến 300 Mbps</li>
+                <li>Phù hợp cho ≥3 thiết bị kết nối</li>
+              </ul>
+              <a href="lienhe.html" class="btn">Đăng ký ngay</a>
+            </div>
+            <div class="internet-type">
+              <img src="internetsky.png" alt="Internet SKY" />
+              <h3>Internet SKY</h3>
+              <p style="font-weight: bold; color: #1877f2">
+                Chỉ từ 190.000đ/tháng
+              </p>
+              <ul>
+                <li>Modem Wi-Fi 6</li>
+                <li>Tốc độ Download lên đến 1 Gbps</li>
+                <li>Phù hợp cho ≥8 thiết bị kết nối</li>
+              </ul>
+              <a href="lienhe.html" class="btn">Đăng ký ngay</a>
+            </div>
+            <div class="internet-type">
+              <img src="fptantam.png" alt="FPT An Tâm" />
+              <h3>FPT An Tâm</h3>
+              <p style="font-weight: bold; color: #ff6f1a">
+                Chỉ từ 195.000đ/tháng
+              </p>
+              <ul>
+                <li>Modem Wi-Fi 6</li>
+                <li>Tốc độ lên đến 300 Mbps</li>
+                <li>Chặn web độc hại, quản lý truy cập trẻ em</li>
+              </ul>
+              <a href="lienhe.html" class="btn">Đăng ký ngay</a>
+            </div>
+            <div class="internet-type">
+              <img src="internetgigaf1.png" alt="Internet Giga F1" />
+              <h3>Internet Giga F1</h3>
+              <p style="font-weight: bold; color: #1877f2">
+                Chỉ từ 190.000đ/tháng
+              </p>
+              <ul>
+                <li>Modem Wi-Fi 6</li>
+                <li>Tốc độ lên đến 300 Mbps</li>
+                <li>Tặng 2 Wi-Fi Mesh, Ultra Fast khi trả trước</li>
+                <li>Phù hợp cho ≥3 thiết bị kết nối</li>
+              </ul>
+              <a href="lienhe.html" class="btn">Đăng ký ngay</a>
+            </div>
+          </div>
         </div>
-        <div class="internet-type">
-          <img src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png" alt="FPT An Tâm" />
-          <h3>FPT An Tâm</h3>
-          <p style="font-weight:bold;color:#ff6f1a;">Chỉ từ 195.000đ/tháng</p>
-          <ul>
-            <li>Modem Wi-Fi 6</li>
-            <li>Tốc độ lên đến 300 Mbps</li>
-            <li>Chặn web độc hại, quản lý truy cập trẻ em</li>
-          </ul>
-          <a href="lienhe.html" class="btn">Đăng ký ngay</a>
+
+        <div id="personal-container-2" class="package-container">
+          <div class="internet-types">
+            <div class="internet-type">
+              <img src="internetmetaf1.png" alt="Internet Meta F1" />
+              <h3>Internet Meta F1</h3>
+              <p style="font-weight: bold; color: #1877f2">
+                Chỉ từ 305.000đ/tháng
+              </p>
+              <ul>
+                <li>Modem Wi-Fi 6</li>
+                <li>Tốc độ lên đến 1 Gbps</li>
+                <li>Tặng 1 Wi-Fi Mesh</li>
+                <li>
+                  Tặng thêm Wi-Fi Mesh & 3 tháng Ultra Fast khi trả trước 6
+                  tháng trở lên
+                </li>
+                <li>Phù hợp hộ gia đình lớn & game thủ</li>
+              </ul>
+              <a href="lienhe.html" class="btn">Đăng ký ngay</a>
+            </div>
+            <div class="internet-type">
+              <img src="internetmetaf2.png" alt="Internet Meta F2" />
+              <h3>Internet Meta F2</h3>
+              <p style="font-weight: bold; color: #1877f2">
+                Chỉ từ 325.000đ/tháng
+              </p>
+              <ul>
+                <li>Modem Wi-Fi 6</li>
+                <li>Tốc độ lên đến 1 Gbps</li>
+                <li>Tặng 2 Wi-Fi Mesh</li>
+                <li>
+                  Tặng thêm Wi-Fi Mesh & 3 tháng Ultra Fast khi trả trước 6
+                  tháng trở lên
+                </li>
+                <li>Phù hợp hộ gia đình lớn & game thủ</li>
+              </ul>
+              <a href="lienhe.html" class="btn">Đăng ký ngay</a>
+            </div>
+            <div class="internet-type">
+              <img src="internetmetaf3.png" alt="Internet Meta F3" />
+              <h3>Internet Meta F3</h3>
+              <p style="font-weight: bold; color: #ff6f1a">
+                Chỉ từ 355.000đ/tháng
+              </p>
+              <ul>
+                <li>Modem Wi-Fi 6</li>
+                <li>Tốc độ lên đến 1 Gbps</li>
+                <li>Tặng 3 Wi-Fi Mesh</li>
+                <li>
+                  Tặng thêm Wi-Fi Mesh & 3 tháng Ultra Fast khi trả trước từ 6
+                  tháng trở lên
+                </li>
+                <li>Phù hợp hộ gia đình lớn & game thủ</li>
+              </ul>
+              <a href="lienhe.html" class="btn">Đăng ký ngay</a>
+            </div>
+            <div class="internet-type">
+              <img src="internetskyf1.png" alt="Internet Sky F1" />
+              <h3>Internet Sky F1</h3>
+              <p style="font-weight: bold; color: #1877f2">
+                Chỉ từ 210.000đ/tháng
+              </p>
+              <ul>
+                <li>Modem Wi-Fi 6</li>
+                <li>Tốc độ Download lên tới 1 Gbps</li>
+                <li>Tặng 1 Wi-Fi Mesh</li>
+                <li>
+                  Tặng thêm Wi-Fi Mesh & 3 tháng Ultra Fast khi trả trước 6
+                  tháng trở lên
+                </li>
+                <li>Phù hợp cho ≥8 thiết bị kết nối</li>
+              </ul>
+              <a href="lienhe.html" class="btn">Đăng ký ngay</a>
+            </div>
+          </div>
         </div>
-        <div class="internet-type">
-          <img src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png" alt="Internet Giga F1" />
-          <h3>Internet Giga F1</h3>
-          <p style="font-weight:bold;color:#1877f2;">Chỉ từ 190.000đ/tháng</p>
-          <ul>
-            <li>Modem Wi-Fi 6</li>
-            <li>Tốc độ lên đến 300 Mbps</li>
-            <li>Tặng 2 Wi-Fi Mesh, Ultra Fast khi trả trước</li>
-            <li>Phù hợp cho ≥3 thiết bị kết nối</li>
-          </ul>
-          <a href="lienhe.html" class="btn">Đăng ký ngay</a>
-        </div>
-        <div class="internet-type">
-          <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Internet Meta F1" />
-          <h3>Internet Meta F1</h3>
-          <p style="font-weight:bold;color:#1877f2;">Chỉ từ 305.000đ/tháng</p>
-          <ul>
-            <li>Modem Wi-Fi 6</li>
-            <li>Tốc độ lên đến 1 Gbps</li>
-            <li>Tặng 1 Wi-Fi Mesh</li>
-            <li>Tặng thêm Wi-Fi Mesh & 3 tháng Ultra Fast khi trả trước 6 tháng trở lên</li>
-            <li>Phù hợp hộ gia đình lớn & game thủ</li>
-          </ul>
-          <a href="lienhe.html" class="btn">Đăng ký ngay</a>
-        </div>
-        <div class="internet-type">
-          <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Internet Meta F2" />
-          <h3>Internet Meta F2</h3>
-          <p style="font-weight:bold;color:#1877f2;">Chỉ từ 325.000đ/tháng</p>
-          <ul>
-            <li>Modem Wi-Fi 6</li>
-            <li>Tốc độ lên đến 1 Gbps</li>
-            <li>Tặng 2 Wi-Fi Mesh</li>
-            <li>Tặng thêm Wi-Fi Mesh & 3 tháng Ultra Fast khi trả trước 6 tháng trở lên</li>
-            <li>Phù hợp hộ gia đình lớn & game thủ</li>
-          </ul>
-          <a href="lienhe.html" class="btn">Đăng ký ngay</a>
-        </div>
-        <div class="internet-type">
-          <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Internet Meta F3" />
-          <h3>Internet Meta F3</h3>
-          <p style="font-weight:bold;color:#ff6f1a;">Chỉ từ 355.000đ/tháng</p>
-          <ul>
-            <li>Modem Wi-Fi 6</li>
-            <li>Tốc độ lên đến 1 Gbps</li>
-            <li>Tặng 3 Wi-Fi Mesh</li>
-            <li>Tặng thêm Wi-Fi Mesh & 3 tháng Ultra Fast khi trả trước từ 6 tháng trở lên</li>
-            <li>Phù hợp hộ gia đình lớn & game thủ</li>
-          </ul>
-          <a href="lienhe.html" class="btn">Đăng ký ngay</a>
-        </div>
-        <div class="internet-type">
-          <img src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png" alt="Internet Sky F1" />
-          <h3>Internet Sky F1</h3>
-          <p style="font-weight:bold;color:#1877f2;">Chỉ từ 210.000đ/tháng</p>
-          <ul>
-            <li>Modem Wi-Fi 6</li>
-            <li>Tốc độ Download lên tới 1 Gbps</li>
-            <li>Tặng 1 Wi-Fi Mesh</li>
-            <li>Tặng thêm Wi-Fi Mesh & 3 tháng Ultra Fast khi trả trước 6 tháng trở lên</li>
-            <li>Phù hợp cho ≥8 thiết bị kết nối</li>
-          </ul>
-          <a href="lienhe.html" class="btn">Đăng ký ngay</a>
-        </div>
-        <div class="internet-type">
-          <img src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png" alt="Internet Sky F2" />
-          <h3>Internet Sky F2</h3>
-          <p style="font-weight:bold;color:#1877f2;">Chỉ từ 230.000đ/tháng</p>
-          <ul>
-            <li>Modem Wi-Fi 6</li>
-            <li>Tốc độ Download lên tới 1 Gbps</li>
-            <li>Tặng 2 Wi-Fi Mesh</li>
-            <li>Tặng thêm Wi-Fi Mesh & 3 tháng Ultra Fast khi trả trước 6 tháng trở lên</li>
-            <li>Phù hợp cho ≥8 thiết bị kết nối</li>
-          </ul>
-          <a href="lienhe.html" class="btn">Đăng ký ngay</a>
-        </div>
-        <div class="internet-type">
-          <img src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png" alt="Internet Sky F3" />
-          <h3>Internet Sky F3</h3>
-          <p style="font-weight:bold;color:#1877f2;">Chỉ từ 250.000đ/tháng</p>
-          <ul>
-            <li>Modem Wi-Fi 6</li>
-            <li>Tốc độ Download lên tới 1 Gbps</li>
-            <li>Tặng 3 Wi-Fi Mesh</li>
-            <li>Tặng thêm Wi-Fi Mesh & 3 tháng Ultra Fast khi trả trước 6 tháng trở lên</li>
-            <li>Phù hợp cho ≥8 thiết bị kết nối</li>
-          </ul>
-          <a href="lienhe.html" class="btn">Đăng ký ngay</a>
-        </div>
-        <div class="internet-type">
-          <img src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png" alt="Internet Giga F2" />
-          <h3>Internet Giga F2</h3>
-          <p style="font-weight:bold;color:#1877f2;">Chỉ từ 220.000đ/tháng</p>
-          <ul>
-            <li>Modem Wi-Fi 6</li>
-            <li>Tốc độ lên đến 300 Mbps</li>
-            <li>Tặng 2 Wi-Fi Mesh</li>
-            <li>Tặng thêm Wi-Fi Mesh & 3 tháng Ultra Fast khi trả trước 6 tháng trở lên</li>
-            <li>Phù hợp cho ≥3 thiết bị kết nối</li>
-          </ul>
-          <a href="lienhe.html" class="btn">Đăng ký ngay</a>
-        </div>
-        <div class="internet-type">
-          <img src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png" alt="Internet Giga F3" />
-          <h3>Internet Giga F3</h3>
-          <p style="font-weight:bold;color:#1877f2;">Chỉ từ 240.000đ/tháng</p>
-          <ul>
-            <li>Modem Wi-Fi 6</li>
-            <li>Tốc độ lên đến 300 Mbps</li>
-            <li>Tặng 3 Wi-Fi Mesh</li>
-            <li>Tặng thêm Wi-Fi Mesh & 3 tháng Ultra Fast khi trả trước 6 tháng trở lên</li>
-            <li>Phù hợp cho ≥3 thiết bị kết nối</li>
-          </ul>
-          <a href="lienhe.html" class="btn">Đăng ký ngay</a>
+
+        <div id="personal-container-3" class="package-container">
+          <div class="internet-types">
+            <div class="internet-type">
+              <img src="internetskyf2.png" alt="Internet Sky F2" />
+              <h3>Internet Sky F2</h3>
+              <p style="font-weight: bold; color: #1877f2">
+                Chỉ từ 230.000đ/tháng
+              </p>
+              <ul>
+                <li>Modem Wi-Fi 6</li>
+                <li>Tốc độ Download lên tới 1 Gbps</li>
+                <li>Tặng 2 Wi-Fi Mesh</li>
+                <li>
+                  Tặng thêm Wi-Fi Mesh & 3 tháng Ultra Fast khi trả trước 6
+                  tháng trở lên
+                </li>
+                <li>Phù hợp cho ≥8 thiết bị kết nối</li>
+              </ul>
+              <a href="lienhe.html" class="btn">Đăng ký ngay</a>
+            </div>
+            <div class="internet-type">
+              <img src="internetskyf3.png" alt="Internet Sky F3" />
+              <h3>Internet Sky F3</h3>
+              <p style="font-weight: bold; color: #1877f2">
+                Chỉ từ 250.000đ/tháng
+              </p>
+              <ul>
+                <li>Modem Wi-Fi 6</li>
+                <li>Tốc độ Download lên tới 1 Gbps</li>
+                <li>Tặng 3 Wi-Fi Mesh</li>
+                <li>
+                  Tặng thêm Wi-Fi Mesh & 3 tháng Ultra Fast khi trả trước 6
+                  tháng trở lên
+                </li>
+                <li>Phù hợp cho ≥8 thiết bị kết nối</li>
+              </ul>
+              <a href="lienhe.html" class="btn">Đăng ký ngay</a>
+            </div>
+            <div class="internet-type">
+              <img src="internetgigaf2.png" alt="Internet Giga F2" />
+              <h3>Internet Giga F2</h3>
+              <p style="font-weight: bold; color: #1877f2">
+                Chỉ từ 220.000đ/tháng
+              </p>
+              <ul>
+                <li>Modem Wi-Fi 6</li>
+                <li>Tốc độ lên đến 300 Mbps</li>
+                <li>Tặng 2 Wi-Fi Mesh</li>
+                <li>
+                  Tặng thêm Wi-Fi Mesh & 3 tháng Ultra Fast khi trả trước 6
+                  tháng trở lên
+                </li>
+                <li>Phù hợp cho ≥3 thiết bị kết nối</li>
+              </ul>
+              <a href="lienhe.html" class="btn">Đăng ký ngay</a>
+            </div>
+            <div class="internet-type">
+              <img src="internetgigaf3.png" alt="Internet Giga F3" />
+              <h3>Internet Giga F3</h3>
+              <p style="font-weight: bold; color: #1877f2">
+                Chỉ từ 240.000đ/tháng
+              </p>
+              <ul>
+                <li>Modem Wi-Fi 6</li>
+                <li>Tốc độ lên đến 300 Mbps</li>
+                <li>Tặng 3 Wi-Fi Mesh</li>
+                <li>
+                  Tặng thêm Wi-Fi Mesh & 3 tháng Ultra Fast khi trả trước 6
+                  tháng trở lên
+                </li>
+                <li>Phù hợp cho ≥3 thiết bị kết nối</li>
+              </ul>
+              <a href="lienhe.html" class="btn">Đăng ký ngay</a>
+            </div>
+          </div>
         </div>
       </div>
-      <h2>Combo Giải trí & Gia đình</h2>
-      <div class="internet-types">
-        <div class="internet-type">
-          <img src="https://cdn-icons-png.flaticon.com/512/2921/2921822.png" alt="Combo Giải trí" />
-          <h3>Combo Giải trí</h3>
-          <p style="font-weight:bold;color:#ff6f1a;">Chỉ từ 200.000đ/tháng</p>
-          <ul>
-            <li>Modem Wi-Fi 6 & FPT Play Box</li>
-            <li>Tốc độ Download/Upload 300 Mbps</li>
-            <li>Kho phim, truyền hình đa dạng</li>
-            <li>Phù hợp cá nhân, hộ gia đình ≥3 thiết bị</li>
-          </ul>
-          <a href="lienhe.html" class="btn">Đăng ký ngay</a>
+
+      <!-- Tab 2: Combo Giải trí & Gia đình -->
+      <div id="combo-tab" class="tab-content">
+        <h2>Combo Giải trí & Gia đình</h2>
+        <div class="package-navigation">
+          <button class="nav-btn" onclick="changePage('combo', -1)">
+            ← Trước
+          </button>
+          <span class="page-indicator"
+            >Trang <span id="combo-page">1</span> /
+            <span id="combo-total">1</span></span
+          >
+          <button class="nav-btn" onclick="changePage('combo', 1)">
+            Sau →
+          </button>
         </div>
-        <div class="internet-type">
-          <img src="https://cdn-icons-png.flaticon.com/512/2921/2921822.png" alt="Combo An Tâm" />
-          <h3>Combo An Tâm</h3>
-          <p style="font-weight:bold;color:#ff6f1a;">Chỉ từ 245.000đ/tháng</p>
-          <ul>
-            <li>Modem Wi-Fi 6 & FPT Play Box</li>
-            <li>Chặn web độc hại, quản lý truy cập trẻ em</li>
-            <li>Xem hơn 130 kênh truyền hình</li>
-          </ul>
-          <a href="lienhe.html" class="btn">Đăng ký ngay</a>
-        </div>
-        <div class="internet-type">
-          <img src="https://cdn-icons-png.flaticon.com/512/2921/2921822.png" alt="Combo GIGA" />
-          <h3>Combo GIGA</h3>
-          <p style="font-weight:bold;color:#ff6f1a;">Chỉ từ 230.000đ/tháng</p>
-          <ul>
-            <li>Modem Wi-Fi 6 & FPT Play Box</li>
-            <li>Phù hợp cá nhân, hộ gia đình</li>
-            <li>Xem hơn 130 kênh truyền hình</li>
-          </ul>
-          <a href="lienhe.html" class="btn">Đăng ký ngay</a>
-        </div>
-        <div class="internet-type">
-          <img src="https://cdn-icons-png.flaticon.com/512/2921/2921822.png" alt="Combo SKY" />
-          <h3>Combo SKY</h3>
-          <p style="font-weight:bold;color:#ff6f1a;">Chỉ từ 230.000đ/tháng</p>
-          <ul>
-            <li>Modem Wi-Fi 6 & FPT Play Box</li>
-            <li>Xem hơn 130 kênh truyền hình</li>
-            <li>Phù hợp với hộ gia đình</li>
-          </ul>
-          <a href="lienhe.html" class="btn">Đăng ký ngay</a>
-        </div>
-      </div>
-      <h2>Internet & Combo Game, Meta</h2>
-      <div class="internet-types">
-        <div class="internet-type">
-          <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Gói F-Game" />
-          <h3>Gói F-Game</h3>
-          <p style="font-weight:bold;color:#1877f2;">Chỉ từ 230.000đ/tháng</p>
-          <ul>
-            <li>Modem Wi-Fi 6</li>
-            <li>Ultra Fast hỗ trợ 50+ tựa game</li>
-            <li>Giảm độ trễ tới 16ms</li>
-          </ul>
-          <a href="lienhe.html" class="btn">Đăng ký ngay</a>
-        </div>
-        <div class="internet-type">
-          <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Combo F-Game" />
-          <h3>Combo F-Game</h3>
-          <p style="font-weight:bold;color:#ff6f1a;">Chỉ từ 280.000đ/tháng</p>
-          <ul>
-            <li>Modem Wi-Fi 6 & FPT Play Box</li>
-            <li>Ultra Fast hỗ trợ 50+ tựa game</li>
-            <li>Xem hơn 130 kênh truyền hình</li>
-          </ul>
-          <a href="lienhe.html" class="btn">Đăng ký ngay</a>
-        </div>
-        <div class="internet-type">
-          <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Internet META" />
-          <h3>Internet META</h3>
-          <p style="font-weight:bold;color:#1877f2;">Chỉ từ 295.000đ/tháng</p>
-          <ul>
-            <li>Modem Wi-Fi 6</li>
-            <li>Tốc độ Download/Upload 1 Gbps</li>
-            <li>Phù hợp gia đình lớn & game thủ</li>
-          </ul>
-          <a href="lienhe.html" class="btn">Đăng ký ngay</a>
-        </div>
-        <div class="internet-type">
-          <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Combo META" />
-          <h3>Combo META</h3>
-          <p style="font-weight:bold;color:#ff6f1a;">Chỉ từ 330.000đ/tháng</p>
-          <ul>
-            <li>Modem Wi-Fi 6 & FPT Play Box</li>
-            <li>Xem hơn 130 kênh truyền hình</li>
-            <li>Tốc độ lên đến 1 Gbps</li>
-          </ul>
-          <a href="lienhe.html" class="btn">Đăng ký ngay</a>
+
+        <div id="combo-container-1" class="package-container active">
+          <div class="internet-types">
+            <div class="internet-type">
+              <img src="comboGiaiTri.png" alt="Combo Giải trí" />
+              <h3>Combo Giải trí</h3>
+              <p style="font-weight: bold; color: #ff6f1a">
+                Chỉ từ 200.000đ/tháng
+              </p>
+              <ul>
+                <li>Modem Wi-Fi 6 & FPT Play Box</li>
+                <li>Tốc độ Download/Upload 300 Mbps</li>
+                <li>Kho phim, truyền hình đa dạng</li>
+                <li>Phù hợp cá nhân, hộ gia đình ≥3 thiết bị</li>
+              </ul>
+              <a href="lienhe.html" class="btn">Đăng ký ngay</a>
+            </div>
+            <div class="internet-type">
+              <img src="comboAnTam.png" alt="Combo An Tâm" />
+              <h3>Combo An Tâm</h3>
+              <p style="font-weight: bold; color: #ff6f1a">
+                Chỉ từ 245.000đ/tháng
+              </p>
+              <ul>
+                <li>Modem Wi-Fi 6 & FPT Play Box</li>
+                <li>Chặn web độc hại, quản lý truy cập trẻ em</li>
+                <li>Xem hơn 130 kênh truyền hình</li>
+              </ul>
+              <a href="lienhe.html" class="btn">Đăng ký ngay</a>
+            </div>
+            <div class="internet-type">
+              <img src="comboGiGa.png" alt="Combo GIGA" />
+              <h3>Combo GIGA</h3>
+              <p style="font-weight: bold; color: #ff6f1a">
+                Chỉ từ 230.000đ/tháng
+              </p>
+              <ul>
+                <li>Modem Wi-Fi 6 & FPT Play Box</li>
+                <li>Phù hợp cá nhân, hộ gia đình</li>
+                <li>Xem hơn 130 kênh truyền hình</li>
+              </ul>
+              <a href="lienhe.html" class="btn">Đăng ký ngay</a>
+            </div>
+            <div class="internet-type">
+              <img src="comboSky.png" alt="Combo SKY" />
+              <h3>Combo SKY</h3>
+              <p style="font-weight: bold; color: #ff6f1a">
+                Chỉ từ 230.000đ/tháng
+              </p>
+              <ul>
+                <li>Modem Wi-Fi 6 & FPT Play Box</li>
+                <li>Xem hơn 130 kênh truyền hình</li>
+                <li>Phù hợp với hộ gia đình</li>
+              </ul>
+              <a href="lienhe.html" class="btn">Đăng ký ngay</a>
+            </div>
+          </div>
         </div>
       </div>
-      <h2>Internet Mesh/Meta/Sky/Giga F-series</h2>
-      <div class="internet-types">
-        <div class="internet-type">
-          <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Internet Meta F1" />
-          <h3>Internet Meta F1</h3>
-          <p style="font-weight:bold;color:#1877f2;">Chỉ từ 305.000đ/tháng</p>
-          <ul>
-            <li>Modem Wi-Fi 6</li>
-            <li>Tốc độ lên đến 1 Gbps</li>
-            <li>Tặng 1 Wi-Fi Mesh</li>
-            <li>Tặng thêm Wi-Fi Mesh & 3 tháng Ultra Fast khi trả trước 6 tháng trở lên</li>
-            <li>Phù hợp hộ gia đình lớn & game thủ</li>
-          </ul>
-          <a href="lienhe.html" class="btn">Đăng ký ngay</a>
+
+      <!-- Tab 3: Internet & Combo Game, Meta -->
+      <div id="game-tab" class="tab-content">
+        <h2>Internet & Combo Game, Meta</h2>
+        <div class="package-navigation">
+          <button class="nav-btn" onclick="changePage('game', -1)">
+            ← Trước
+          </button>
+          <span class="page-indicator"
+            >Trang <span id="game-page">1</span> /
+            <span id="game-total">1</span></span
+          >
+          <button class="nav-btn" onclick="changePage('game', 1)">Sau →</button>
         </div>
-        <div class="internet-type">
-          <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Internet Meta F2" />
-          <h3>Internet Meta F2</h3>
-          <p style="font-weight:bold;color:#1877f2;">Chỉ từ 325.000đ/tháng</p>
-          <ul>
-            <li>Modem Wi-Fi 6</li>
-            <li>Tốc độ lên đến 1 Gbps</li>
-            <li>Tặng 2 Wi-Fi Mesh</li>
-            <li>Tặng thêm Wi-Fi Mesh & 3 tháng Ultra Fast khi trả trước 6 tháng trở lên</li>
-            <li>Phù hợp hộ gia đình lớn & game thủ</li>
-          </ul>
-          <a href="lienhe.html" class="btn">Đăng ký ngay</a>
-        </div>
-        <div class="internet-type">
-          <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Internet Meta F3" />
-          <h3>Internet Meta F3</h3>
-          <p style="font-weight:bold;color:#ff6f1a;">Chỉ từ 355.000đ/tháng</p>
-          <ul>
-            <li>Modem Wi-Fi 6</li>
-            <li>Tốc độ lên đến 1 Gbps</li>
-            <li>Tặng 3 Wi-Fi Mesh</li>
-            <li>Tặng thêm Wi-Fi Mesh & 3 tháng Ultra Fast khi trả trước từ 6 tháng trở lên</li>
-            <li>Phù hợp hộ gia đình lớn & game thủ</li>
-          </ul>
-          <a href="lienhe.html" class="btn">Đăng ký ngay</a>
-        </div>
-        <div class="internet-type">
-          <img src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png" alt="Internet Sky F1" />
-          <h3>Internet Sky F1</h3>
-          <p style="font-weight:bold;color:#1877f2;">Chỉ từ 210.000đ/tháng</p>
-          <ul>
-            <li>Modem Wi-Fi 6</li>
-            <li>Tốc độ Download lên tới 1 Gbps</li>
-            <li>Tặng 1 Wi-Fi Mesh</li>
-            <li>Tặng thêm Wi-Fi Mesh & 3 tháng Ultra Fast khi trả trước 6 tháng trở lên</li>
-            <li>Phù hợp cho ≥8 thiết bị kết nối</li>
-          </ul>
-          <a href="lienhe.html" class="btn">Đăng ký ngay</a>
-        </div>
-        <div class="internet-type">
-          <img src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png" alt="Internet Sky F2" />
-          <h3>Internet Sky F2</h3>
-          <p style="font-weight:bold;color:#1877f2;">Chỉ từ 230.000đ/tháng</p>
-          <ul>
-            <li>Modem Wi-Fi 6</li>
-            <li>Tốc độ Download lên tới 1 Gbps</li>
-            <li>Tặng 2 Wi-Fi Mesh</li>
-            <li>Tặng thêm Wi-Fi Mesh & 3 tháng Ultra Fast khi trả trước 6 tháng trở lên</li>
-            <li>Phù hợp cho ≥8 thiết bị kết nối</li>
-          </ul>
-          <a href="lienhe.html" class="btn">Đăng ký ngay</a>
-        </div>
-        <div class="internet-type">
-          <img src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png" alt="Internet Giga F2" />
-          <h3>Internet Giga F2</h3>
-          <p style="font-weight:bold;color:#1877f2;">Chỉ từ 220.000đ/tháng</p>
-          <ul>
-            <li>Modem Wi-Fi 6</li>
-            <li>Tốc độ lên đến 300 Mbps</li>
-            <li>Tặng 2 Wi-Fi Mesh</li>
-            <li>Tặng thêm Wi-Fi Mesh & 3 tháng Ultra Fast khi trả trước 6 tháng trở lên</li>
-            <li>Phù hợp cho ≥3 thiết bị kết nối</li>
-          </ul>
-          <a href="lienhe.html" class="btn">Đăng ký ngay</a>
-        </div>
-        <div class="internet-type">
-          <img src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png" alt="Internet Giga F3" />
-          <h3>Internet Giga F3</h3>
-          <p style="font-weight:bold;color:#1877f2;">Chỉ từ 240.000đ/tháng</p>
-          <ul>
-            <li>Modem Wi-Fi 6</li>
-            <li>Tốc độ lên đến 300 Mbps</li>
-            <li>Tặng 3 Wi-Fi Mesh</li>
-            <li>Tặng thêm Wi-Fi Mesh & 3 tháng Ultra Fast khi trả trước 6 tháng trở lên</li>
-            <li>Phù hợp cho ≥3 thiết bị kết nối</li>
-          </ul>
-          <a href="lienhe.html" class="btn">Đăng ký ngay</a>
-        </div>
-        <div class="internet-type">
-          <img src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png" alt="Internet Sky F3" />
-          <h3>Internet Sky F3</h3>
-          <p style="font-weight:bold;color:#1877f2;">Chỉ từ 250.000đ/tháng</p>
-          <ul>
-            <li>Modem Wi-Fi 6</li>
-            <li>Tốc độ Download lên tới 1 Gbps</li>
-            <li>Tặng 3 Wi-Fi Mesh</li>
-            <li>Tặng thêm Wi-Fi Mesh & 3 tháng Ultra Fast khi trả trước 6 tháng trở lên</li>
-            <li>Phù hợp cho ≥8 thiết bị kết nối</li>
-          </ul>
-          <a href="lienhe.html" class="btn">Đăng ký ngay</a>
+
+        <div id="game-container-1" class="package-container active">
+          <div class="internet-types">
+            <div class="internet-type">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png"
+                alt="Gói F-Game"
+              />
+              <h3>Gói F-Game</h3>
+              <p style="font-weight: bold; color: #1877f2">
+                Chỉ từ 230.000đ/tháng
+              </p>
+              <ul>
+                <li>Modem Wi-Fi 6</li>
+                <li>Ultra Fast hỗ trợ 50+ tựa game</li>
+                <li>Giảm độ trễ tới 16ms</li>
+              </ul>
+              <a href="lienhe.html" class="btn">Đăng ký ngay</a>
+            </div>
+            <div class="internet-type">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png"
+                alt="Combo F-Game"
+              />
+              <h3>Combo F-Game</h3>
+              <p style="font-weight: bold; color: #ff6f1a">
+                Chỉ từ 280.000đ/tháng
+              </p>
+              <ul>
+                <li>Modem Wi-Fi 6 & FPT Play Box</li>
+                <li>Ultra Fast hỗ trợ 50+ tựa game</li>
+                <li>Xem hơn 130 kênh truyền hình</li>
+              </ul>
+              <a href="lienhe.html" class="btn">Đăng ký ngay</a>
+            </div>
+            <div class="internet-type">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png"
+                alt="Internet META"
+              />
+              <h3>Internet META</h3>
+              <p style="font-weight: bold; color: #1877f2">
+                Chỉ từ 295.000đ/tháng
+              </p>
+              <ul>
+                <li>Modem Wi-Fi 6</li>
+                <li>Tốc độ Download/Upload 1 Gbps</li>
+                <li>Phù hợp gia đình lớn & game thủ</li>
+              </ul>
+              <a href="lienhe.html" class="btn">Đăng ký ngay</a>
+            </div>
+            <div class="internet-type">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png"
+                alt="Combo META"
+              />
+              <h3>Combo META</h3>
+              <p style="font-weight: bold; color: #ff6f1a">
+                Chỉ từ 330.000đ/tháng
+              </p>
+              <ul>
+                <li>Modem Wi-Fi 6 & FPT Play Box</li>
+                <li>Xem hơn 130 kênh truyền hình</li>
+                <li>Tốc độ lên đến 1 Gbps</li>
+              </ul>
+              <a href="lienhe.html" class="btn">Đăng ký ngay</a>
+            </div>
+          </div>
         </div>
       </div>
-      <h2>Bảng giá Internet FPT</h2>
-      <table>
-        <tr><th>Gói</th><th>Tốc độ</th><th>Giá/tháng</th><th>Khuyến mãi</th></tr>
-        <tr><td>GIGA</td><td>300 Mbps</td><td style="color:#ff6f1a;font-weight:bold;">250.000đ</td><td>Tặng modem Wi-Fi 6</td></tr>
-        <tr><td>SKY</td><td>1 Gbps</td><td style="color:#ff6f1a;font-weight:bold;">320.000đ</td><td>Tặng modem Wi-Fi 6</td></tr>
-      </table>
-      <div style="text-align:center;margin-top:24px;">
-        <a href="lienhe.html" class="btn" style="font-size:1.1rem;">Nhận tư vấn miễn phí</a>
+
+      <!-- Tab 4: Internet Mesh/Meta/Sky/Giga F-series -->
+      <div id="mesh-tab" class="tab-content">
+        <h2>Internet Mesh/Meta/Sky/Giga F-series</h2>
+        <div class="package-navigation">
+          <button class="nav-btn" onclick="changePage('mesh', -1)">
+            ← Trước
+          </button>
+          <span class="page-indicator"
+            >Trang <span id="mesh-page">1</span> /
+            <span id="mesh-total">2</span></span
+          >
+          <button class="nav-btn" onclick="changePage('mesh', 1)">Sau →</button>
+        </div>
+
+        <div id="mesh-container-1" class="package-container active">
+          <div class="internet-types">
+            <div class="internet-type">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png"
+                alt="Internet Meta F1"
+              />
+              <h3>Internet Meta F1</h3>
+              <p style="font-weight: bold; color: #1877f2">
+                Chỉ từ 305.000đ/tháng
+              </p>
+              <ul>
+                <li>Modem Wi-Fi 6</li>
+                <li>Tốc độ lên đến 1 Gbps</li>
+                <li>Tặng 1 Wi-Fi Mesh</li>
+                <li>
+                  Tặng thêm Wi-Fi Mesh & 3 tháng Ultra Fast khi trả trước 6
+                  tháng trở lên
+                </li>
+                <li>Phù hợp hộ gia đình lớn & game thủ</li>
+              </ul>
+              <a href="lienhe.html" class="btn">Đăng ký ngay</a>
+            </div>
+            <div class="internet-type">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png"
+                alt="Internet Meta F2"
+              />
+              <h3>Internet Meta F2</h3>
+              <p style="font-weight: bold; color: #1877f2">
+                Chỉ từ 325.000đ/tháng
+              </p>
+              <ul>
+                <li>Modem Wi-Fi 6</li>
+                <li>Tốc độ lên đến 1 Gbps</li>
+                <li>Tặng 2 Wi-Fi Mesh</li>
+                <li>
+                  Tặng thêm Wi-Fi Mesh & 3 tháng Ultra Fast khi trả trước 6
+                  tháng trở lên
+                </li>
+                <li>Phù hợp hộ gia đình lớn & game thủ</li>
+              </ul>
+              <a href="lienhe.html" class="btn">Đăng ký ngay</a>
+            </div>
+            <div class="internet-type">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png"
+                alt="Internet Meta F3"
+              />
+              <h3>Internet Meta F3</h3>
+              <p style="font-weight: bold; color: #ff6f1a">
+                Chỉ từ 355.000đ/tháng
+              </p>
+              <ul>
+                <li>Modem Wi-Fi 6</li>
+                <li>Tốc độ lên đến 1 Gbps</li>
+                <li>Tặng 3 Wi-Fi Mesh</li>
+                <li>
+                  Tặng thêm Wi-Fi Mesh & 3 tháng Ultra Fast khi trả trước từ 6
+                  tháng trở lên
+                </li>
+                <li>Phù hợp hộ gia đình lớn & game thủ</li>
+              </ul>
+              <a href="lienhe.html" class="btn">Đăng ký ngay</a>
+            </div>
+            <div class="internet-type">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png"
+                alt="Internet Sky F1"
+              />
+              <h3>Internet Sky F1</h3>
+              <p style="font-weight: bold; color: #1877f2">
+                Chỉ từ 210.000đ/tháng
+              </p>
+              <ul>
+                <li>Modem Wi-Fi 6</li>
+                <li>Tốc độ Download lên tới 1 Gbps</li>
+                <li>Tặng 1 Wi-Fi Mesh</li>
+                <li>
+                  Tặng thêm Wi-Fi Mesh & 3 tháng Ultra Fast khi trả trước 6
+                  tháng trở lên
+                </li>
+                <li>Phù hợp cho ≥8 thiết bị kết nối</li>
+              </ul>
+              <a href="lienhe.html" class="btn">Đăng ký ngay</a>
+            </div>
+          </div>
+        </div>
+
+        <div id="mesh-container-2" class="package-container">
+          <div class="internet-types">
+            <div class="internet-type">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png"
+                alt="Internet Sky F2"
+              />
+              <h3>Internet Sky F2</h3>
+              <p style="font-weight: bold; color: #1877f2">
+                Chỉ từ 230.000đ/tháng
+              </p>
+              <ul>
+                <li>Modem Wi-Fi 6</li>
+                <li>Tốc độ Download lên tới 1 Gbps</li>
+                <li>Tặng 2 Wi-Fi Mesh</li>
+                <li>
+                  Tặng thêm Wi-Fi Mesh & 3 tháng Ultra Fast khi trả trước 6
+                  tháng trở lên
+                </li>
+                <li>Phù hợp cho ≥8 thiết bị kết nối</li>
+              </ul>
+              <a href="lienhe.html" class="btn">Đăng ký ngay</a>
+            </div>
+            <div class="internet-type">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png"
+                alt="Internet Giga F2"
+              />
+              <h3>Internet Giga F2</h3>
+              <p style="font-weight: bold; color: #1877f2">
+                Chỉ từ 220.000đ/tháng
+              </p>
+              <ul>
+                <li>Modem Wi-Fi 6</li>
+                <li>Tốc độ lên đến 300 Mbps</li>
+                <li>Tặng 2 Wi-Fi Mesh</li>
+                <li>
+                  Tặng thêm Wi-Fi Mesh & 3 tháng Ultra Fast khi trả trước 6
+                  tháng trở lên
+                </li>
+                <li>Phù hợp cho ≥3 thiết bị kết nối</li>
+              </ul>
+              <a href="lienhe.html" class="btn">Đăng ký ngay</a>
+            </div>
+            <div class="internet-type">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png"
+                alt="Internet Giga F3"
+              />
+              <h3>Internet Giga F3</h3>
+              <p style="font-weight: bold; color: #1877f2">
+                Chỉ từ 240.000đ/tháng
+              </p>
+              <ul>
+                <li>Modem Wi-Fi 6</li>
+                <li>Tốc độ lên đến 300 Mbps</li>
+                <li>Tặng 3 Wi-Fi Mesh</li>
+                <li>
+                  Tặng thêm Wi-Fi Mesh & 3 tháng Ultra Fast khi trả trước 6
+                  tháng trở lên
+                </li>
+                <li>Phù hợp cho ≥3 thiết bị kết nối</li>
+              </ul>
+              <a href="lienhe.html" class="btn">Đăng ký ngay</a>
+            </div>
+            <div class="internet-type">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png"
+                alt="Internet Sky F3"
+              />
+              <h3>Internet Sky F3</h3>
+              <p style="font-weight: bold; color: #1877f2">
+                Chỉ từ 250.000đ/tháng
+              </p>
+              <ul>
+                <li>Modem Wi-Fi 6</li>
+                <li>Tốc độ Download lên tới 1 Gbps</li>
+                <li>Tặng 3 Wi-Fi Mesh</li>
+                <li>
+                  Tặng thêm Wi-Fi Mesh & 3 tháng Ultra Fast khi trả trước 6
+                  tháng trở lên
+                </li>
+                <li>Phù hợp cho ≥8 thiết bị kết nối</li>
+              </ul>
+              <a href="lienhe.html" class="btn">Đăng ký ngay</a>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
 
@@ -400,17 +669,138 @@
 
     <script>
       // Load header and footer
-      fetch('header.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('header-placeholder').innerHTML = data;
+      fetch("header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-placeholder").innerHTML = data;
         });
 
-      fetch('footer.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('footer-placeholder').innerHTML = data;
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-placeholder").innerHTML = data;
         });
+
+      // Tab system
+      function showTab(tabName) {
+        // Hide all tab contents
+        const tabContents = document.querySelectorAll(".tab-content");
+        tabContents.forEach((content) => {
+          content.classList.remove("active");
+        });
+
+        // Remove active class from all tab buttons
+        const tabButtons = document.querySelectorAll(".tab-btn");
+        tabButtons.forEach((button) => {
+          button.classList.remove("active");
+        });
+
+        // Show selected tab content
+        document.getElementById(tabName + "-tab").classList.add("active");
+
+        // Add active class to clicked button
+        event.target.classList.add("active");
+
+        // Reset page navigation for the new tab
+        resetPageNavigation(tabName);
+      }
+
+      function resetPageNavigation(section) {
+        const packageData = {
+          personal: { current: 1, total: 3 },
+          combo: { current: 1, total: 1 },
+          game: { current: 1, total: 1 },
+          mesh: { current: 1, total: 2 },
+        };
+
+        const data = packageData[section];
+        if (data) {
+          // Hide all containers for this section
+          for (let i = 1; i <= data.total; i++) {
+            const container = document.getElementById(
+              `${section}-container-${i}`
+            );
+            if (container) {
+              container.classList.remove("active");
+            }
+          }
+
+          // Show first container
+          const firstContainer = document.getElementById(
+            `${section}-container-1`
+          );
+          if (firstContainer) {
+            firstContainer.classList.add("active");
+          }
+
+          // Update page indicator
+          const pageElement = document.getElementById(`${section}-page`);
+          if (pageElement) {
+            pageElement.textContent = "1";
+          }
+
+          // Update button states
+          updateButtonStates(section);
+        }
+      }
+
+      // Package navigation system
+      const packageData = {
+        personal: { current: 1, total: 3 },
+        combo: { current: 1, total: 1 },
+        game: { current: 1, total: 1 },
+        mesh: { current: 1, total: 2 },
+      };
+
+      function changePage(section, direction) {
+        const data = packageData[section];
+        const newPage = data.current + direction;
+
+        if (newPage >= 1 && newPage <= data.total) {
+          // Hide current page
+          const currentContainer = document.getElementById(
+            `${section}-container-${data.current}`
+          );
+          currentContainer.classList.remove("active");
+
+          // Show new page
+          const newContainer = document.getElementById(
+            `${section}-container-${newPage}`
+          );
+          newContainer.classList.add("active");
+
+          // Update data
+          data.current = newPage;
+
+          // Update page indicator
+          document.getElementById(`${section}-page`).textContent = newPage;
+
+          // Update button states
+          updateButtonStates(section);
+        }
+      }
+
+      function updateButtonStates(section) {
+        const data = packageData[section];
+        const prevBtn = document.querySelector(
+          `[onclick="changePage('${section}', -1)"]`
+        );
+        const nextBtn = document.querySelector(
+          `[onclick="changePage('${section}', 1)"]`
+        );
+
+        if (prevBtn && nextBtn) {
+          prevBtn.disabled = data.current === 1;
+          nextBtn.disabled = data.current === data.total;
+        }
+      }
+
+      // Initialize button states
+      document.addEventListener("DOMContentLoaded", function () {
+        Object.keys(packageData).forEach((section) => {
+          updateButtonStates(section);
+        });
+      });
     </script>
   </body>
-</html> 
+</html>

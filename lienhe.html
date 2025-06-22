@@ -3,61 +3,135 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=800" />
-    <meta name="description" content="Liên hệ FPT Telecom để được tư vấn, hỗ trợ lắp đặt Internet, truyền hình, camera. Hotline 1800 6601, email hotro@fpt.com.vn." />
+    <meta name="description" content="Liên hệ FPT Telecom để được tư vấn, hỗ trợ lắp đặt Internet, truyền hình, camera. Hotline 0986720623, email dophu7331@gmail.com." />
     <meta property="og:title" content="Liên hệ FPT Telecom" />
-    <meta property="og:description" content="Liên hệ FPT Telecom để được tư vấn, hỗ trợ lắp đặt Internet, truyền hình, camera. Hotline 1800 6601, email hotro@fpt.com.vn." />
+    <meta property="og:description" content="Liên hệ FPT Telecom để được tư vấn, hỗ trợ lắp đặt Internet, truyền hình, camera. Hotline 0986720623, email dophu7331@gmail.com." />
     <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/2/2f/FPT_logo_2010.svg" />
     <meta property="og:url" content="https://fpt.vn/lienhe" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Liên hệ FPT Telecom" />
-    <meta name="twitter:description" content="Liên hệ FPT Telecom để được tư vấn, hỗ trợ lắp đặt Internet, truyền hình, camera. Hotline 1800 6601, email hotro@fpt.com.vn." />
+    <meta name="twitter:description" content="Liên hệ FPT Telecom để được tư vấn, hỗ trợ lắp đặt Internet, truyền hình, camera. Hotline 0986720623, email dophu7331@gmail.com." />
     <meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/commons/2/2f/FPT_logo_2010.svg" />
     <title>Liên hệ FPT Telecom</title>
     <link rel="stylesheet" href="lienhe.css" />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="footer.css" />
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/2/2f/FPT_logo_2010.svg" />
     <script>
       function showSuccess(e) {
         e.preventDefault();
         document.getElementById('contact-success').style.display = 'block';
+        document.querySelector('.btn').innerHTML = '<span class="loading"></span> Đang gửi...';
+        setTimeout(() => {
+          document.querySelector('.btn').innerHTML = 'Gửi liên hệ';
+        }, 2000);
       }
     </script>
   </head>
   <body>
-    <header>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/FPT_logo_2010.svg" alt="FPT Telecom Logo" class="logo" />
-      <nav aria-label="Main navigation">
-        <a href="index.html">Trang chủ</a> | <a href="products.html">Sản phẩm</a> | <a href="combo.html">Combo</a> |
-        <a href="baogia.html">Báo giá</a> | <a href="lienhe.html" class="active">Liên hệ</a>
-      </nav>
-    </header>
+    <!-- Include Header -->
+    <div id="header-placeholder"></div>
+
     <main>
-      <h1>Liên hệ FPT Telecom</h1>
-      <section>
-        <h2>Thông tin liên hệ</h2>
-        <ul class="contact-info">
-          <li><img src="https://cdn-icons-png.flaticon.com/128/597/597177.png" width="20" alt="Hotline" style="vertical-align:middle;"> Hotline: <b>1800 6601</b></li>
-          <li><img src="https://cdn-icons-png.flaticon.com/128/732/732200.png" width="20" alt="Email" style="vertical-align:middle;"> Email: <b>hotro@fpt.com.vn</b></li>
-          <li><img src="https://cdn-icons-png.flaticon.com/128/684/684908.png" width="20" alt="Địa chỉ" style="vertical-align:middle;"> Địa chỉ: <b>Tòa nhà FPT, 17 Duy Tân, Cầu Giấy, Hà Nội</b></li>
-        </ul>
-      </section>
-      <section>
-        <h2>Gửi thông tin liên hệ</h2>
-        <form style="max-width:400px;margin:auto;" onsubmit="showSuccess(event)">
-          <input type="text" name="name" placeholder="Họ và tên" required aria-label="Họ và tên">
-          <input type="email" name="email" placeholder="Email" required aria-label="Email">
-          <textarea name="message" placeholder="Nội dung liên hệ" rows="4" required aria-label="Nội dung liên hệ"></textarea>
-          <button type="submit" class="btn" aria-label="Gửi liên hệ">Gửi liên hệ</button>
-        </form>
-        <div id="contact-success" style="display:none;text-align:center;margin-top:18px;color:var(--primary);font-weight:500;">Cảm ơn bạn đã liên hệ! Chúng tôi sẽ phản hồi sớm nhất.</div>
-      </section>
-    </main>
-    <footer>
-      <div style="text-align:center;margin-bottom:8px;">
-        <a href="https://www.facebook.com/FPTTelecom" target="_blank" aria-label="Facebook FPT Telecom" style="margin:0 8px;"><img src="https://cdn-icons-png.flaticon.com/128/733/733547.png" width="28" alt="Facebook"></a>
-        <a href="https://zalo.me/18006601" target="_blank" aria-label="Zalo FPT Telecom" style="margin:0 8px;"><img src="https://cdn-icons-png.flaticon.com/128/2111/2111728.png" width="28" alt="Zalo"></a>
-        <a href="https://www.youtube.com/user/FptTelecomOnline" target="_blank" aria-label="YouTube FPT Telecom" style="margin:0 8px;"><img src="https://cdn-icons-png.flaticon.com/128/1384/1384060.png" width="28" alt="YouTube"></a>
+      <!-- Hero Section -->
+      <div class="hero-section">
+        <h1>Liên hệ FPT Telecom</h1>
+        <p>Chúng tôi luôn sẵn sàng hỗ trợ bạn 24/7 với đội ngũ chuyên nghiệp và dịch vụ chất lượng cao</p>
       </div>
-      <p>&copy; 2025 FPT Telecom. All rights reserved.</p>
-    </footer>
+
+      <!-- Contact Layout -->
+      <div class="contact-layout">
+        <!-- Contact Information Section -->
+        <section>
+          <h2>Thông tin liên hệ</h2>
+          <ul class="contact-info">
+            <li>
+              <img src="https://cdn-icons-png.flaticon.com/128/597/597177.png" alt="Hotline" />
+              <div>
+                <strong>Hotline</strong><br>
+                <b>0986720623</b>
+              </div>
+            </li>
+            <li>
+              <img src="https://cdn-icons-png.flaticon.com/128/732/732200.png" alt="Email" />
+              <div>
+                <strong>Email</strong><br>
+                <b>dophu7331@gmail.com</b>
+              </div>
+            </li>
+            <li>
+              <img src="https://cdn-icons-png.flaticon.com/128/684/684908.png" alt="Địa chỉ" />
+              <div>
+                <strong>Địa chỉ</strong><br>
+                <b>94 Phạm Hùng, Lý Thường Kiệt, Quy Nhơn, Bình Định, Việt Nam</b>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Contact Form Section -->
+        <div class="contact-form-section">
+          <h2>Gửi thông tin liên hệ</h2>
+          <form onsubmit="showSuccess(event)">
+            <div class="form-group">
+              <label for="name">Họ và tên *</label>
+              <input type="text" id="name" name="name" placeholder="Nhập họ và tên của bạn" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" placeholder="Nhập địa chỉ email" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="phone">Số điện thoại</label>
+              <input type="tel" id="phone" name="phone" placeholder="Nhập số điện thoại">
+            </div>
+            
+            <div class="form-group">
+              <label for="service">Dịch vụ quan tâm</label>
+              <select id="service" name="service">
+                <option value="">Chọn dịch vụ</option>
+                <option value="internet">Internet FPT</option>
+                <option value="tv">Truyền hình FPT</option>
+                <option value="camera">Camera FPT</option>
+                <option value="combo">Combo dịch vụ</option>
+                <option value="other">Khác</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Nội dung liên hệ *</label>
+              <textarea id="message" name="message" placeholder="Mô tả chi tiết nhu cầu của bạn..." required></textarea>
+            </div>
+            
+            <button type="submit" class="btn">Gửi liên hệ</button>
+          </form>
+          
+          <div id="contact-success" style="display:none;">
+            <strong>🎉 Cảm ơn bạn đã liên hệ!</strong><br>
+            Chúng tôi sẽ phản hồi trong thời gian sớm nhất.
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Include Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+      // Load header and footer
+      fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('header-placeholder').innerHTML = data;
+        });
+
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-placeholder').innerHTML = data;
+        });
+    </script>
   </body>
 </html> 

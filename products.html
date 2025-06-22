@@ -3,28 +3,91 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=800" />
-    <meta name="description" content="Danh sách sản phẩm FPT: Internet, Truyền hình, Camera, Combo. Chọn sản phẩm phù hợp và xem chi tiết để nhận ưu đãi lớn từ FPT Telecom." />
+    <meta
+      name="description"
+      content="Danh sách sản phẩm FPT: Internet, Truyền hình, Camera, Combo. Chọn sản phẩm phù hợp và xem chi tiết để nhận ưu đãi lớn từ FPT Telecom."
+    />
     <meta property="og:title" content="Sản phẩm FPT Telecom" />
-    <meta property="og:description" content="Danh sách sản phẩm FPT: Internet, Truyền hình, Camera, Combo. Chọn sản phẩm phù hợp và xem chi tiết để nhận ưu đãi lớn từ FPT Telecom." />
-    <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/2/2f/FPT_logo_2010.svg" />
+    <meta
+      property="og:description"
+      content="Danh sách sản phẩm FPT: Internet, Truyền hình, Camera, Combo. Chọn sản phẩm phù hợp và xem chi tiết để nhận ưu đãi lớn từ FPT Telecom."
+    />
+    <meta
+      property="og:image"
+      content="https://upload.wikimedia.org/wikipedia/commons/2/2f/FPT_logo_2010.svg"
+    />
     <meta property="og:url" content="https://fpt.vn/products" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Sản phẩm FPT Telecom" />
-    <meta name="twitter:description" content="Danh sách sản phẩm FPT: Internet, Truyền hình, Camera, Combo. Chọn sản phẩm phù hợp và xem chi tiết để nhận ưu đãi lớn từ FPT Telecom." />
-    <meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/commons/2/2f/FPT_logo_2010.svg" />
+    <meta
+      name="twitter:description"
+      content="Danh sách sản phẩm FPT: Internet, Truyền hình, Camera, Combo. Chọn sản phẩm phù hợp và xem chi tiết để nhận ưu đãi lớn từ FPT Telecom."
+    />
+    <meta
+      name="twitter:image"
+      content="https://upload.wikimedia.org/wikipedia/commons/2/2f/FPT_logo_2010.svg"
+    />
     <title>Sản phẩm FPT Telecom</title>
     <link rel="stylesheet" href="products.css" />
     <link rel="stylesheet" href="header.css" />
     <link rel="stylesheet" href="footer.css" />
-    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/2/2f/FPT_logo_2010.svg" />
+    <link
+      rel="icon"
+      href="https://upload.wikimedia.org/wikipedia/commons/2/2f/FPT_logo_2010.svg"
+    />
     <style>
-      .product-list { display: flex; flex-wrap: wrap; gap: 32px; justify-content: center; margin-top: 32px; }
-      .product-card { background: #fff; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); width: 270px; padding: 28px 18px 22px 18px; display: flex; flex-direction: column; align-items: center; transition: box-shadow 0.2s, transform 0.2s; }
-      .product-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.13); transform: translateY(-6px) scale(1.03); }
-      .product-card img { width: 110px; height: 110px; object-fit: contain; margin-bottom: 16px; }
-      .product-card h2 { font-size: 1.2rem; margin: 0 0 10px 0; text-align: center; }
-      .product-card p { color: #555; font-size: 1rem; text-align: center; margin-bottom: 16px; }
-      @media (max-width: 900px) { .product-list { flex-direction: column; align-items: center; } .product-card { width: 90%; } }
+      .product-list {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 20px;
+        justify-content: center;
+        margin-top: 32px;
+        overflow-x: auto;
+      }
+      .product-card {
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+        width: 250px;
+        min-width: 250px;
+        padding: 28px 18px 22px 18px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: box-shadow 0.2s, transform 0.2s;
+      }
+      .product-card:hover {
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.13);
+        transform: translateY(-6px) scale(1.03);
+      }
+      .product-card img {
+        width: 110px;
+        height: 110px;
+        object-fit: contain;
+        margin-bottom: 16px;
+      }
+      .product-card h2 {
+        font-size: 1.2rem;
+        margin: 0 0 10px 0;
+        text-align: center;
+      }
+      .product-card p {
+        color: #555;
+        font-size: 1rem;
+        text-align: center;
+        margin-bottom: 16px;
+      }
+      @media (max-width: 900px) {
+        .product-list {
+          flex-direction: column;
+          align-items: center;
+          flex-wrap: wrap;
+        }
+        .product-card {
+          width: 90%;
+          min-width: auto;
+        }
+      }
     </style>
   </head>
   <body>
@@ -33,30 +96,44 @@
 
     <main>
       <h1>Sản phẩm FPT Telecom</h1>
-      <p class="subtitle">Khám phá các sản phẩm, dịch vụ nổi bật của FPT Telecom</p>
+      <p class="subtitle">
+        Khám phá các sản phẩm, dịch vụ nổi bật của FPT Telecom
+      </p>
       <div class="product-list">
         <div class="product-card">
-          <img src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png" alt="Internet FPT" />
+          <img src="internetFPT.png" alt="Internet FPT" />
           <h2>Internet FPT</h2>
-          <p>Internet cáp quang tốc độ cao, ổn định, phù hợp cho cá nhân, gia đình, doanh nghiệp.</p>
+          <p>
+            Internet cáp quang tốc độ cao, ổn định, phù hợp cho cá nhân, gia
+            đình, doanh nghiệp.
+          </p>
           <a href="product-internet.html" class="btn">Xem chi tiết</a>
         </div>
         <div class="product-card">
-          <img src="https://cdn-icons-png.flaticon.com/512/2921/2921822.png" alt="Truyền hình FPT" />
+          <img src="truyenhinhFPT.jpg" alt="Truyền hình FPT" />
           <h2>Truyền hình FPT</h2>
-          <p>Truyền hình thông minh, kho nội dung giải trí đa dạng, chất lượng HD, nhiều tiện ích.</p>
+          <p>
+            Truyền hình thông minh, kho nội dung giải trí đa dạng, chất lượng
+            HD, nhiều tiện ích.
+          </p>
           <a href="product-truyenhinh.html" class="btn">Xem chi tiết</a>
         </div>
         <div class="product-card">
-          <img src="https://cdn-icons-png.flaticon.com/512/2921/2921820.png" alt="Camera FPT" />
+          <img src="cameraFPT.jpg" alt="Camera FPT" />
           <h2>Camera FPT</h2>
-          <p>Giải pháp camera an ninh, giám sát từ xa, lưu trữ cloud, bảo mật tuyệt đối.</p>
+          <p>
+            Giải pháp camera an ninh, giám sát từ xa, lưu trữ cloud, bảo mật
+            tuyệt đối.
+          </p>
           <a href="product-camera.html" class="btn">Xem chi tiết</a>
         </div>
         <div class="product-card">
-          <img src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png" alt="Combo FPT" />
+          <img src="comboFPT.png" alt="Combo FPT" />
           <h2>Combo FPT</h2>
-          <p>Kết hợp Internet, truyền hình, camera với giá ưu đãi, nhiều quà tặng hấp dẫn.</p>
+          <p>
+            Kết hợp Internet, truyền hình, camera với giá ưu đãi, nhiều quà tặng
+            hấp dẫn.
+          </p>
           <a href="combo.html" class="btn">Xem chi tiết</a>
         </div>
       </div>
@@ -67,17 +144,17 @@
 
     <script>
       // Load header and footer
-      fetch('header.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('header-placeholder').innerHTML = data;
+      fetch("header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-placeholder").innerHTML = data;
         });
 
-      fetch('footer.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('footer-placeholder').innerHTML = data;
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-placeholder").innerHTML = data;
         });
     </script>
   </body>
-</html> 
+</html>

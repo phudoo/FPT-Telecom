@@ -157,6 +157,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 { 
+  font-family: 'Times New Roman', Times, serif;
   font-size: 2.5rem; 
   font-weight: 800;
   text-align: center;
@@ -482,6 +483,144 @@ footer a {
 
 footer a:hover {
   color: var(--primary-light);
+}
+
+/* Pagination System */
+.package-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  margin: var(--spacing-xl) 0;
+  padding: var(--spacing-lg);
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-light);
+}
+
+.nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+  min-width: 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: var(--transition);
+}
+
+.nav-btn:hover::before {
+  left: 100%;
+}
+
+.nav-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+}
+
+.nav-btn:active {
+  transform: translateY(0);
+}
+
+.nav-btn:disabled {
+  background: var(--text-muted);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.nav-btn:disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.nav-btn:disabled::before {
+  display: none;
+}
+
+.page-indicator {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  min-width: 120px;
+  text-align: center;
+}
+
+/* Package Container Management */
+.package-container {
+  display: none;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.package-container.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Back Button Styles */
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 8px 16px;
+  border: 2px solid var(--primary);
+  border-radius: var(--radius);
+  transition: var(--transition);
+  background: var(--white);
+}
+
+.back-btn:hover {
+  background: var(--primary);
+  color: var(--white);
+  transform: translateX(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.back-btn svg {
+  transition: var(--transition);
+}
+
+.back-btn:hover svg {
+  transform: translateX(-2px);
 }
 
 /* Responsive Design - Giữ nguyên layout */
