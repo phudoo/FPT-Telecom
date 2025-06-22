@@ -79,8 +79,6 @@ main {
   max-width: 1280px;
   margin: 0 auto;
   padding: var(--spacing-2xl) var(--spacing-lg);
-  width: 100%;
-  box-sizing: border-box;
 }
 
 /* Hero Section */
@@ -157,8 +155,6 @@ main {
   background: transparent;
   border: 2px solid var(--white);
   color: var(--white);
-  width: auto;
-  padding: var(--spacing-sm) var(--spacing-xl);
 }
 
 .hero-buttons .btn:hover {
@@ -609,7 +605,6 @@ h3 {
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
   background: var(--white);
-  -webkit-overflow-scrolling: touch;
 }
 
 .comparison-table table {
@@ -1063,8 +1058,421 @@ h3 {
   box-shadow: var(--shadow-xl);
 }
 
-/* Responsive Design - Cải thiện cho mobile */
-@media (max-width: 1200px) {
+/* ===== MOBILE RESPONSIVE DESIGN ===== */
+/* Mobile First Approach - Scale down everything by 10x for mobile */
+
+@media (max-width: 768px) {
+  /* Scale down main container */
+  main {
+    max-width: 100%;
+    padding: 0.3rem 0.15rem;
+    transform: scale(0.1);
+    transform-origin: top left;
+    width: 1000%; /* 10x width to compensate for scale */
+    height: auto;
+  }
+
+  /* Scale down body */
+  body {
+    font-size: 0.1rem;
+    line-height: 0.16rem;
+    overflow-x: hidden;
+  }
+
+  /* Scale down typography */
+  h1 {
+    font-size: 0.25rem;
+    margin-bottom: 0.15rem;
+  }
+
+  h2 {
+    font-size: 0.2rem;
+    margin-bottom: 0.1rem;
+  }
+
+  h3 {
+    font-size: 0.15rem;
+    margin-bottom: 0.15rem;
+  }
+
+  .subtitle {
+    font-size: 0.11rem;
+    margin-bottom: 0.3rem;
+  }
+
+  /* Scale down hero section */
+  .hero-section {
+    padding: 0.4rem 0.2rem;
+    min-height: 0.5rem;
+    margin-bottom: 0.4rem;
+    border-radius: 0.125rem;
+  }
+
+  .hero-section h1 {
+    font-size: 0.35rem;
+    margin-bottom: 0.15rem;
+  }
+
+  .hero-section p {
+    font-size: 0.125rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .hero-buttons {
+    gap: 0.1rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .hero-buttons .btn {
+    padding: 0.1rem 0.2rem;
+    font-size: 0.1rem;
+  }
+
+  /* Scale down spacing */
+  .spacing-xs { margin: 0.025rem; }
+  .spacing-sm { margin: 0.05rem; }
+  .spacing-md { margin: 0.1rem; }
+  .spacing-lg { margin: 0.15rem; }
+  .spacing-xl { margin: 0.2rem; }
+  .spacing-2xl { margin: 0.3rem; }
+  .spacing-3xl { margin: 0.4rem; }
+
+  /* Scale down packages */
+  .packages {
+    grid-template-columns: repeat(auto-fit, minmax(0.24rem, 1fr));
+    gap: 0.15rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .package {
+    padding: 0.1rem;
+    border-radius: 0.075rem;
+  }
+
+  .package img {
+    width: 0.08rem;
+    height: 0.08rem;
+    margin-bottom: 0.15rem;
+  }
+
+  .package h2 {
+    font-size: 0.12rem;
+    margin-bottom: 0.05rem;
+  }
+
+  .price {
+    font-size: 0.14rem;
+    margin-bottom: 0.1rem;
+  }
+
+  .price span {
+    font-size: 0.09rem;
+  }
+
+  .package ul li {
+    font-size: 0.09rem;
+    margin-bottom: 0.05rem;
+    padding-left: 0.24rem;
+  }
+
+  .package-badge {
+    font-size: 0.08rem;
+    padding: 0.025rem 0.05rem;
+    top: 0.1rem;
+    right: 0.1rem;
+  }
+
+  /* Scale down buttons */
+  .btn {
+    padding: 0.1rem;
+    font-size: 0.1rem;
+    border-radius: 0.0375rem;
+  }
+
+  .btn-large {
+    padding: 0.15rem;
+    font-size: 0.11rem;
+  }
+
+  /* Scale down features */
+  .features-grid {
+    grid-template-columns: repeat(auto-fit, minmax(0.25rem, 1fr));
+    gap: 0.3rem;
+    margin-top: 0.3rem;
+  }
+
+  .feature {
+    padding: 0.3rem;
+    border-radius: 0.1rem;
+  }
+
+  .feature-icon {
+    font-size: 0.3rem;
+    margin-bottom: 0.15rem;
+  }
+
+  .feature h3 {
+    font-size: 0.13rem;
+    margin-bottom: 0.1rem;
+  }
+
+  .feature p {
+    font-size: 0.09rem;
+  }
+
+  /* Scale down about features */
+  .about-features {
+    grid-template-columns: repeat(auto-fit, minmax(0.25rem, 1fr));
+    gap: 0.3rem;
+    margin-top: 0.4rem;
+  }
+
+  .about-feature {
+    padding: 0.3rem;
+    border-radius: 0.1rem;
+  }
+
+  .about-feature i {
+    font-size: 0.3rem;
+    margin-bottom: 0.15rem;
+  }
+
+  .about-feature h3 {
+    font-size: 0.13rem;
+    margin-bottom: 0.1rem;
+  }
+
+  .about-feature p {
+    font-size: 0.09rem;
+  }
+
+  /* Scale down stats */
+  .stats-section {
+    margin-top: 0.4rem;
+    padding: 0.4rem 0;
+    border-radius: 0.125rem;
+  }
+
+  .stats-container {
+    grid-template-columns: repeat(auto-fit, minmax(0.2rem, 1fr));
+    gap: 0.3rem;
+  }
+
+  .stat-card {
+    gap: 0.15rem;
+    padding: 0.15rem;
+    border-radius: 0.075rem;
+  }
+
+  .stat-icon {
+    font-size: 0.25rem;
+  }
+
+  .stat-number {
+    font-size: 0.2rem;
+  }
+
+  .stat-label {
+    font-size: 0.09rem;
+  }
+
+  /* Scale down testimonials */
+  .testimonials-section {
+    margin-top: 0.4rem;
+    padding: 0.3rem 0;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: repeat(auto-fit, minmax(0.3rem, 1fr));
+    gap: 0.3rem;
+    margin-top: 0.3rem;
+  }
+
+  .testimonial {
+    padding: 0.3rem;
+    border-radius: 0.1rem;
+  }
+
+  .testimonial-content p {
+    font-size: 0.09rem;
+  }
+
+  .author-avatar {
+    width: 0.05rem;
+    height: 0.05rem;
+    font-size: 0.12rem;
+  }
+
+  .author-info h4 {
+    font-size: 0.1rem;
+    margin-bottom: 0.025rem;
+  }
+
+  .author-info span {
+    font-size: 0.09rem;
+  }
+
+  /* Scale down news */
+  .news-section {
+    margin-top: 0.4rem;
+    padding: 0.3rem 0;
+  }
+
+  .news-grid {
+    grid-template-columns: repeat(auto-fit, minmax(0.3rem, 1fr));
+    gap: 0.3rem;
+    margin-top: 0.3rem;
+  }
+
+  .news-card {
+    border-radius: 0.1rem;
+  }
+
+  .news-image {
+    height: 0.2rem;
+    font-size: 0.3rem;
+  }
+
+  .news-content {
+    padding: 0.15rem;
+  }
+
+  .news-content h3 {
+    font-size: 0.12rem;
+    margin-bottom: 0.1rem;
+  }
+
+  .news-content p {
+    font-size: 0.09rem;
+    margin-bottom: 0.15rem;
+  }
+
+  /* Scale down CTA */
+  .cta-section {
+    margin-top: 0.4rem;
+    padding: 0.4rem;
+    border-radius: 0.125rem;
+  }
+
+  .cta-content h2 {
+    font-size: 0.2rem;
+    margin-bottom: 0.15rem;
+  }
+
+  .cta-content p {
+    font-size: 0.11rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .cta-buttons {
+    gap: 0.15rem;
+  }
+
+  .cta-buttons .btn {
+    min-width: 0.2rem;
+    font-size: 0.1rem;
+  }
+
+  /* Scale down comparison table */
+  .comparison-section {
+    margin-top: 0.4rem;
+    padding: 0.3rem 0;
+  }
+
+  .comparison-table {
+    margin-top: 0.3rem;
+    border-radius: 0.075rem;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    padding: 0.15rem;
+    font-size: 0.09rem;
+  }
+
+  .comparison-table table {
+    min-width: 0.6rem;
+  }
+
+  /* Scale down floating buttons */
+  .zalo-chat {
+    bottom: 0.1rem;
+    right: 0.15rem;
+  }
+
+  .zalo-chat img {
+    width: 0.06rem;
+    height: 0.06rem;
+  }
+
+  .call-now {
+    bottom: 0.15rem;
+    right: 0.15rem;
+    width: 0.06rem;
+    height: 0.06rem;
+    font-size: 0.15rem;
+  }
+
+  /* Scale down services section */
+  .services-section {
+    margin-top: 0.4rem;
+  }
+
+  /* Scale down package camera combo */
+  .package-camera-combo .package-header {
+    padding: 0.1rem;
+    border-radius: 0.075rem 0.075rem 0 0;
+  }
+
+  .package-camera-combo .package-body {
+    padding: 0.15rem;
+  }
+
+  .standard-combos {
+    margin-top: 0.3rem;
+  }
+
+  /* Scale down package icons */
+  .package-icon i {
+    font-size: 0.25rem;
+    margin-bottom: 0.15rem;
+  }
+
+  /* Scale down intro section */
+  .intro {
+    margin-top: 0.4rem;
+  }
+
+  .intro h2 {
+    font-size: 0.2rem;
+    margin-bottom: 0.1rem;
+  }
+
+  .intro .subtitle {
+    font-size: 0.11rem;
+    margin-bottom: 0.3rem;
+  }
+}
+
+/* Tablet responsive - Medium scale down */
+@media (min-width: 769px) and (max-width: 1024px) {
+  main {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .hero-section {
+    min-height: 400px;
+    padding: var(--spacing-2xl) var(--spacing-lg);
+  }
+
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-section p {
+    font-size: 1.1rem;
+  }
+
   .packages {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: var(--spacing-lg);
@@ -1080,426 +1488,9 @@ h3 {
   }
 }
 
-@media (max-width: 900px) {
-  .hero-section {
-    min-height: 400px;
-    padding: var(--spacing-2xl) var(--spacing-lg);
-  }
-
-  .hero-section h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero-section p {
-    font-size: 1.1rem;
-  }
-
-  main {
-    padding: var(--spacing-lg) var(--spacing-md);
-  }
-
-  .features-grid {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: var(--spacing-md);
-  }
-
-  .about-features {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--spacing-lg);
-  }
-}
-
-@media (max-width: 768px) {
-  /* Mobile First Approach */
-  main {
-    padding: var(--spacing-md) var(--spacing-sm);
-    max-width: 100%;
-  }
-
-  .hero-section {
-    padding: var(--spacing-lg) var(--spacing-md);
-    min-height: 300px;
-    border-radius: var(--radius-lg);
-    margin-bottom: var(--spacing-xl);
-  }
-
-  .hero-section h1 {
-    font-size: 2rem;
-    margin-bottom: var(--spacing-md);
-  }
-
-  .hero-section p {
-    font-size: 1rem;
-    margin-bottom: var(--spacing-lg);
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-    gap: var(--spacing-sm);
-    align-items: center;
-  }
-
-  .hero-buttons .btn {
-    width: 100%;
-    max-width: 280px;
-    padding: var(--spacing-md);
-  }
-
-  /* Typography adjustments */
-  h1 {
-    font-size: 1.8rem;
-  }
-  
-  h2 {
-    font-size: 1.5rem;
-    margin-bottom: var(--spacing-md);
-  }
-
-  h3 {
-    font-size: 1.2rem;
-  }
-
-  .subtitle {
-    font-size: 1rem;
-    margin-bottom: var(--spacing-lg);
-  }
-
-  /* Package cards */
-  .packages {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-md);
-    margin-bottom: var(--spacing-lg);
-  }
-
-  .package {
-    padding: var(--spacing-lg);
-    margin: 0;
-  }
-
-  .package-camera-combo .package-header {
-    padding: var(--spacing-md);
-  }
-
-  .package-camera-combo .package-body {
-    padding: var(--spacing-md);
-  }
-
-  .package h2 {
-    font-size: 1.1rem;
-  }
-
-  .price {
-    font-size: 1.2rem;
-  }
-
-  /* Features grid */
-  .features-grid {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-md);
-  }
-
-  .feature {
-    padding: var(--spacing-lg);
-  }
-
-  .feature-icon {
-    font-size: 2rem;
-  }
-
-  /* About features */
-  .about-features {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-md);
-    margin-top: var(--spacing-lg);
-  }
-
-  .about-feature {
-    padding: var(--spacing-lg);
-  }
-
-  .about-feature i {
-    font-size: 2.5rem;
-  }
-
-  /* Statistics */
-  .stats-section {
-    padding: var(--spacing-xl) var(--spacing-md);
-    margin-top: var(--spacing-xl);
-  }
-
-  .stats-container {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-md);
-  }
-
-  .stat-card {
-    padding: var(--spacing-md);
-    flex-direction: column;
-    text-align: center;
-    gap: var(--spacing-sm);
-  }
-
-  .stat-icon {
-    font-size: 2rem;
-  }
-
-  .stat-number {
-    font-size: 1.5rem;
-  }
-
-  /* Testimonials */
-  .testimonials-grid {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-md);
-  }
-
-  .testimonial {
-    padding: var(--spacing-lg);
-  }
-
-  /* News section */
-  .news-grid {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-md);
-  }
-
-  .news-card {
-    margin-bottom: var(--spacing-md);
-  }
-
-  /* Comparison table */
-  .comparison-table {
-    margin-top: var(--spacing-lg);
-    border-radius: var(--radius);
-  }
-  
-  .comparison-table table {
-    min-width: 500px;
-  }
-  
-  .comparison-table th,
-  .comparison-table td {
-    padding: var(--spacing-sm);
-    font-size: 0.8rem;
-    white-space: nowrap;
-  }
-  
-  .comparison-table th:first-child,
-  .comparison-table td:first-child {
-    position: sticky;
-    left: 0;
-    background: var(--white);
-    z-index: 1;
-  }
-
-  /* CTA section */
-  .cta-section {
-    padding: var(--spacing-xl) var(--spacing-md);
-    margin-top: var(--spacing-xl);
-  }
-
-  .cta-buttons {
-    flex-direction: column;
-    gap: var(--spacing-sm);
-    align-items: center;
-  }
-
-  .cta-buttons .btn {
-    width: 100%;
-    max-width: 280px;
-  }
-
-  /* Floating buttons */
-  .zalo-chat {
-    bottom: 80px;
-    right: var(--spacing-md);
-  }
-
-  .zalo-chat img {
-    width: 50px;
-    height: 50px;
-  }
-
-  .call-now {
-    bottom: var(--spacing-md);
-    right: var(--spacing-md);
-    width: 50px;
-    height: 50px;
-    font-size: 1.2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  /* Small mobile devices */
-  main {
-    padding: var(--spacing-sm);
-  }
-
-  .hero-section {
-    padding: var(--spacing-md) var(--spacing-sm);
-    min-height: 250px;
-  }
-
-  .hero-section h1 {
-    font-size: 1.6rem;
-  }
-
-  .hero-section p {
-    font-size: 0.9rem;
-  }
-
-  .hero-buttons .btn {
-    padding: var(--spacing-sm) var(--spacing-md);
-    font-size: 0.9rem;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-  }
-  
-  h2 {
-    font-size: 1.3rem;
-  }
-
-  .package {
-    padding: var(--spacing-md);
-  }
-
-  .package h2 {
-    font-size: 1rem;
-  }
-
-  .price {
-    font-size: 1.1rem;
-  }
-
-  .feature {
-    padding: var(--spacing-md);
-  }
-
-  .feature-icon {
-    font-size: 1.8rem;
-  }
-
-  .about-feature {
-    padding: var(--spacing-md);
-  }
-
-  .about-feature i {
-    font-size: 2rem;
-  }
-
-  .stat-card {
-    padding: var(--spacing-sm);
-  }
-
-  .stat-number {
-    font-size: 1.3rem;
-  }
-
-  .testimonial {
-    padding: var(--spacing-md);
-  }
-
-  .news-card {
-    margin-bottom: var(--spacing-sm);
-  }
-
-  .cta-section {
-    padding: var(--spacing-lg) var(--spacing-sm);
-  }
-
-  .cta-content h2 {
-    font-size: 1.3rem;
-  }
-
-  .cta-content p {
-    font-size: 0.9rem;
-  }
-
-  /* Floating buttons for very small screens */
-  .zalo-chat {
-    bottom: 70px;
-    right: var(--spacing-sm);
-  }
-
-  .zalo-chat img {
-    width: 45px;
-    height: 45px;
-  }
-
-  .call-now {
-    bottom: var(--spacing-sm);
-    right: var(--spacing-sm);
-    width: 45px;
-    height: 45px;
-    font-size: 1rem;
-  }
-}
-
-/* Landscape orientation for mobile */
-@media (max-width: 768px) and (orientation: landscape) {
-  .hero-section {
-    min-height: 200px;
-    padding: var(--spacing-md);
-  }
-
-  .hero-section h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero-buttons {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .hero-buttons .btn {
-    width: auto;
-    min-width: 150px;
-  }
-}
-
-/* Ensure proper scaling on all devices */
-@media (max-width: 600px) {
-  .packages {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-md);
-  }
-
-  .features-grid {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-md);
-  }
-
-  .feature {
-    padding: var(--spacing-lg);
-  }
-
-  .stats-container {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-md);
-  }
-
-  .testimonials-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .news-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .feature-icon {
-    font-size: 2.5rem;
-  }
-
-  .comparison-table {
-    font-size: 0.9rem;
-  }
-
-  .comparison-table th,
-  .comparison-table td {
-    padding: var(--spacing-md);
-  }
+/* Desktop responsive - Keep original layout */
+@media (min-width: 1025px) {
+  /* Keep all original desktop styles */
 }
 
 /* Animation Classes */
@@ -1601,89 +1592,5 @@ h3 {
   }
   100% {
     transform: rotate(360deg);
-  }
-}
-
-/* Mobile video optimization */
-@media (max-width: 768px) {
-  #background-video {
-    object-position: center;
-  }
-  
-  .video-background {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-}
-
-/* Mobile package images */
-@media (max-width: 768px) {
-  .package img {
-    width: 60px;
-    height: 60px;
-    margin-bottom: var(--spacing-md);
-  }
-  
-  .package-camera-combo .package-header img {
-    width: 100%;
-    height: auto;
-    max-height: 120px;
-    object-fit: contain;
-  }
-}
-
-/* Additional mobile improvements */
-@media (max-width: 768px) {
-  /* Improve touch targets */
-  .btn,
-  .btn-details {
-    min-height: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  /* Better spacing for mobile */
-  .intro,
-  .services-section,
-  .features-section,
-  .testimonials-section,
-  .news-section {
-    margin-top: var(--spacing-xl);
-  }
-  
-  /* Improve list readability */
-  .package ul li {
-    font-size: 0.9rem;
-    line-height: 1.5;
-    margin-bottom: var(--spacing-xs);
-  }
-  
-  /* Better form elements */
-  input, select, textarea {
-    font-size: 16px; /* Prevents zoom on iOS */
-  }
-}
-
-/* Prevent horizontal scroll on mobile */
-@media (max-width: 480px) {
-  body {
-    overflow-x: hidden;
-  }
-  
-  main {
-    overflow-x: hidden;
-  }
-  
-  .hero-section,
-  .intro,
-  .services-section,
-  .features-section,
-  .stats-section,
-  .testimonials-section,
-  .news-section,
-  .cta-section {
-    overflow-x: hidden;
   }
 }

@@ -130,8 +130,110 @@ footer {
   filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(15deg);
 }
 
-/* Responsive Design for Footer - Giữ nguyên layout */
+/* ===== MOBILE RESPONSIVE DESIGN ===== */
+/* Mobile First Approach - Scale down everything by 10x for mobile */
+
 @media (max-width: 768px) {
+  /* Scale down footer container */
+  footer {
+    padding: 0.2rem 0.15rem;
+    border-top: 0.4px solid var(--primary);
+    margin-top: 0.3rem;
+    border-radius: 0.125rem;
+    margin-left: 0.1rem;
+    margin-right: 0.1rem;
+    transform: scale(0.1);
+    transform-origin: top left;
+    width: 1000%; /* 10x width to compensate for scale */
+    height: auto;
+  }
+
+  /* Scale down footer content */
+  .footer-content {
+    max-width: 100%;
+  }
+
+  /* Scale down footer top */
+  .footer-top {
+    gap: 0.15rem;
+    margin-bottom: 0.15rem;
+  }
+
+  /* Scale down footer columns */
+  .footer-column {
+    min-width: 0.2rem;
+  }
+
+  /* Scale down footer logo */
+  .footer-logo {
+    height: 0.32rem;
+    margin-bottom: 0.05rem;
+    padding: 0.3px;
+    border-radius: 0.3px;
+  }
+
+  /* Scale down footer headings */
+  .footer-column h4 {
+    font-size: 0.1rem;
+    margin-bottom: 0.05rem;
+    padding-bottom: 0.025rem;
+  }
+
+  .footer-column h4::after {
+    width: 0.25rem;
+    height: 0.2px;
+  }
+
+  /* Scale down footer links */
+  .footer-column ul li {
+    margin-bottom: 0.025rem;
+  }
+
+  .footer-column a {
+    font-size: 0.09rem;
+  }
+
+  .footer-column a:hover {
+    padding-left: 0.4px;
+  }
+
+  /* Scale down map container */
+  .map-container {
+    border-radius: 0.075rem;
+    margin-bottom: 0.15rem;
+  }
+
+  .map-container iframe {
+    height: 0.25rem;
+  }
+
+  /* Scale down footer bottom */
+  .footer-bottom {
+    border-top: 0.1px solid #3a3a3a;
+    padding-top: 0.1rem;
+    gap: 0.05rem;
+  }
+
+  /* Scale down social links */
+  .social-links {
+    gap: 0.1rem;
+    margin-bottom: 0.1rem;
+  }
+
+  .social-links img {
+    width: 0.28rem;
+    height: 0.28rem;
+  }
+
+  /* Scale down footer text */
+  .footer-column p {
+    font-size: 0.09rem;
+    line-height: 0.14rem;
+  }
+}
+
+/* Tablet responsive - Medium scale down */
+@media (min-width: 769px) and (max-width: 1024px) {
   footer {
     padding: var(--spacing-lg) var(--spacing-md);
     margin-left: var(--spacing-sm);
@@ -149,6 +251,11 @@ footer {
   .footer-bottom {
     gap: var(--spacing-md);
   }
+}
+
+/* Desktop responsive - Keep original layout */
+@media (min-width: 1025px) {
+  /* Keep all original desktop styles */
 }
 
 @media (max-width: 600px) {
