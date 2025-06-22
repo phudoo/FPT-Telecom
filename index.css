@@ -79,6 +79,8 @@ main {
   max-width: 1280px;
   margin: 0 auto;
   padding: var(--spacing-2xl) var(--spacing-lg);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Hero Section */
@@ -155,6 +157,8 @@ main {
   background: transparent;
   border: 2px solid var(--white);
   color: var(--white);
+  width: auto;
+  padding: var(--spacing-sm) var(--spacing-xl);
 }
 
 .hero-buttons .btn:hover {
@@ -605,6 +609,7 @@ h3 {
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
   background: var(--white);
+  -webkit-overflow-scrolling: touch;
 }
 
 .comparison-table table {
@@ -1058,7 +1063,7 @@ h3 {
   box-shadow: var(--shadow-xl);
 }
 
-/* Responsive Design - Giữ nguyên layout trên mobile */
+/* Responsive Design - Cải thiện cho mobile */
 @media (max-width: 1200px) {
   .packages {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -1104,38 +1109,365 @@ h3 {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  /* Mobile First Approach */
+  main {
+    padding: var(--spacing-md) var(--spacing-sm);
+    max-width: 100%;
+  }
+
   .hero-section {
-    padding: var(--spacing-lg);
-    min-height: 350px;
+    padding: var(--spacing-lg) var(--spacing-md);
+    min-height: 300px;
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--spacing-xl);
   }
 
   .hero-section h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
+    margin-bottom: var(--spacing-md);
   }
 
   .hero-section p {
     font-size: 1rem;
+    margin-bottom: var(--spacing-lg);
   }
 
+  .hero-buttons {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    align-items: center;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    max-width: 280px;
+    padding: var(--spacing-md);
+  }
+
+  /* Typography adjustments */
   h1 {
     font-size: 1.8rem;
   }
+  
   h2 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-md);
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  /* Package cards */
+  .packages {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
   }
 
   .package {
     padding: var(--spacing-lg);
+    margin: 0;
   }
 
+  .package-camera-combo .package-header {
+    padding: var(--spacing-md);
+  }
+
+  .package-camera-combo .package-body {
+    padding: var(--spacing-md);
+  }
+
+  .package h2 {
+    font-size: 1.1rem;
+  }
+
+  .price {
+    font-size: 1.2rem;
+  }
+
+  /* Features grid */
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .feature {
+    padding: var(--spacing-lg);
+  }
+
+  .feature-icon {
+    font-size: 2rem;
+  }
+
+  /* About features */
+  .about-features {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+  }
+
+  .about-feature {
+    padding: var(--spacing-lg);
+  }
+
+  .about-feature i {
+    font-size: 2.5rem;
+  }
+
+  /* Statistics */
+  .stats-section {
+    padding: var(--spacing-xl) var(--spacing-md);
+    margin-top: var(--spacing-xl);
+  }
+
+  .stats-container {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .stat-card {
+    padding: var(--spacing-md);
+    flex-direction: column;
+    text-align: center;
+    gap: var(--spacing-sm);
+  }
+
+  .stat-icon {
+    font-size: 2rem;
+  }
+
+  .stat-number {
+    font-size: 1.5rem;
+  }
+
+  /* Testimonials */
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .testimonial {
+    padding: var(--spacing-lg);
+  }
+
+  /* News section */
+  .news-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .news-card {
+    margin-bottom: var(--spacing-md);
+  }
+
+  /* Comparison table */
+  .comparison-table {
+    margin-top: var(--spacing-lg);
+    border-radius: var(--radius);
+  }
+  
+  .comparison-table table {
+    min-width: 500px;
+  }
+  
+  .comparison-table th,
+  .comparison-table td {
+    padding: var(--spacing-sm);
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+  
+  .comparison-table th:first-child,
+  .comparison-table td:first-child {
+    position: sticky;
+    left: 0;
+    background: var(--white);
+    z-index: 1;
+  }
+
+  /* CTA section */
+  .cta-section {
+    padding: var(--spacing-xl) var(--spacing-md);
+    margin-top: var(--spacing-xl);
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    align-items: center;
+  }
+
+  .cta-buttons .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  /* Floating buttons */
+  .zalo-chat {
+    bottom: 80px;
+    right: var(--spacing-md);
+  }
+
+  .zalo-chat img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .call-now {
+    bottom: var(--spacing-md);
+    right: var(--spacing-md);
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Small mobile devices */
+  main {
+    padding: var(--spacing-sm);
+  }
+
+  .hero-section {
+    padding: var(--spacing-md) var(--spacing-sm);
+    min-height: 250px;
+  }
+
+  .hero-section h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-section p {
+    font-size: 0.9rem;
+  }
+
+  .hero-buttons .btn {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .package {
+    padding: var(--spacing-md);
+  }
+
+  .package h2 {
+    font-size: 1rem;
+  }
+
+  .price {
+    font-size: 1.1rem;
+  }
+
+  .feature {
+    padding: var(--spacing-md);
+  }
+
+  .feature-icon {
+    font-size: 1.8rem;
+  }
+
+  .about-feature {
+    padding: var(--spacing-md);
+  }
+
+  .about-feature i {
+    font-size: 2rem;
+  }
+
+  .stat-card {
+    padding: var(--spacing-sm);
+  }
+
+  .stat-number {
+    font-size: 1.3rem;
+  }
+
+  .testimonial {
+    padding: var(--spacing-md);
+  }
+
+  .news-card {
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .cta-section {
+    padding: var(--spacing-lg) var(--spacing-sm);
+  }
+
+  .cta-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .cta-content p {
+    font-size: 0.9rem;
+  }
+
+  /* Floating buttons for very small screens */
+  .zalo-chat {
+    bottom: 70px;
+    right: var(--spacing-sm);
+  }
+
+  .zalo-chat img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .call-now {
+    bottom: var(--spacing-sm);
+    right: var(--spacing-sm);
+    width: 45px;
+    height: 45px;
+    font-size: 1rem;
+  }
+}
+
+/* Landscape orientation for mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .hero-section {
+    min-height: 200px;
+    padding: var(--spacing-md);
+  }
+
+  .hero-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .hero-buttons .btn {
+    width: auto;
+    min-width: 150px;
+  }
+}
+
+/* Ensure proper scaling on all devices */
+@media (max-width: 600px) {
   .packages {
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: var(--spacing-lg);
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
   }
 
   .features-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: 1fr;
     gap: var(--spacing-md);
   }
 
@@ -1144,16 +1476,16 @@ h3 {
   }
 
   .stats-container {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: var(--spacing-lg);
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
   }
 
   .testimonials-grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr;
   }
 
   .news-grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr;
   }
 
   .feature-icon {
@@ -1269,5 +1601,89 @@ h3 {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+/* Mobile video optimization */
+@media (max-width: 768px) {
+  #background-video {
+    object-position: center;
+  }
+  
+  .video-background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Mobile package images */
+@media (max-width: 768px) {
+  .package img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .package-camera-combo .package-header img {
+    width: 100%;
+    height: auto;
+    max-height: 120px;
+    object-fit: contain;
+  }
+}
+
+/* Additional mobile improvements */
+@media (max-width: 768px) {
+  /* Improve touch targets */
+  .btn,
+  .btn-details {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Better spacing for mobile */
+  .intro,
+  .services-section,
+  .features-section,
+  .testimonials-section,
+  .news-section {
+    margin-top: var(--spacing-xl);
+  }
+  
+  /* Improve list readability */
+  .package ul li {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: var(--spacing-xs);
+  }
+  
+  /* Better form elements */
+  input, select, textarea {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+}
+
+/* Prevent horizontal scroll on mobile */
+@media (max-width: 480px) {
+  body {
+    overflow-x: hidden;
+  }
+  
+  main {
+    overflow-x: hidden;
+  }
+  
+  .hero-section,
+  .intro,
+  .services-section,
+  .features-section,
+  .stats-section,
+  .testimonials-section,
+  .news-section,
+  .cta-section {
+    overflow-x: hidden;
   }
 }
