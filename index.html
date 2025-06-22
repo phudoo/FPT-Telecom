@@ -3,115 +3,390 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="FPT Telecom - Nhà cung cấp dịch vụ Internet, truyền hình, combo giải trí, camera hàng đầu Việt Nam. Đăng ký lắp đặt ngay để nhận ưu đãi lớn!" />
-    <meta property="og:title" content="FPT Telecom - Kết nối tương lai" />
-    <meta property="og:description" content="Đăng ký Internet, truyền hình, combo giải trí, camera FPT Telecom. Ưu đãi lớn, lắp đặt nhanh chóng." />
-    <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/2/2f/FPT_logo_2010.svg" />
+    <meta
+      name="description"
+      content="Lắp đặt Internet FPT và Camera FPT tại Bình Định. Dịch vụ uy tín, tốc độ cao, khuyến mãi hấp dẫn. Đăng ký ngay hôm nay!"
+    />
+    <meta
+      property="og:title"
+      content="Lắp đặt Internet FPT - Camera FPT Bình Định"
+    />
+    <meta
+      property="og:description"
+      content="Lắp đặt Internet FPT và Camera FPT tại Bình Định. Dịch vụ uy tín, tốc độ cao, khuyến mãi hấp dẫn. Đăng ký ngay hôm nay!"
+    />
+    <meta
+      property="og:image"
+      content="https://upload.wikimedia.org/wikipedia/commons/2/2f/FPT_logo_2010.svg"
+    />
     <meta property="og:url" content="https://fpt.vn/" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="FPT Telecom - Kết nối tương lai" />
-    <meta name="twitter:description" content="Đăng ký Internet, truyền hình, combo giải trí, camera FPT Telecom. Ưu đãi lớn, lắp đặt nhanh chóng." />
-    <meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/commons/2/2f/FPT_logo_2010.svg" />
-    <title>Trang chủ FPT Telecom</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/2/2f/FPT_logo_2010.svg" />
+    <meta
+      name="twitter:title"
+      content="Lắp đặt Internet FPT - Camera FPT Bình Định"
+    />
+    <meta
+      name="twitter:description"
+      content="Lắp đặt Internet FPT và Camera FPT tại Bình Định. Dịch vụ uy tín, tốc độ cao, khuyến mãi hấp dẫn. Đăng ký ngay hôm nay!"
+    />
+    <meta
+      name="twitter:image"
+      content="https://upload.wikimedia.org/wikipedia/commons/2/2f/FPT_logo_2010.svg"
+    />
+    <title>Lắp đặt Internet FPT - Camera FPT Bình Định</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="icon"
+      href="https://upload.wikimedia.org/wikipedia/commons/2/2f/FPT_logo_2010.svg"
+    />
     <!-- Google Analytics (replace 'G-XXXXXXX' with your ID) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXX');</script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-XXXXXXX");
+    </script>
     <style>
       .zalo-chat {
-        position: fixed; bottom: 90px; right: 18px; z-index: 9999;
+        position: fixed;
+        bottom: 90px;
+        right: 18px;
+        z-index: 9999;
       }
-      .zalo-chat img { width: 56px; height: 56px; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+      .zalo-chat img {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      }
       .call-now {
         display: none;
-        position: fixed; bottom: 18px; right: 18px; z-index: 9999;
-        background: #25d366; color: #fff; border-radius: 50%; width: 56px; height: 56px;
-        display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        position: fixed;
+        bottom: 18px;
+        right: 18px;
+        z-index: 9999;
+        background: #25d366;
+        color: #fff;
+        border-radius: 50%;
+        width: 56px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
         font-size: 2rem;
       }
       @media (max-width: 600px) {
-        .call-now { display: flex; }
+        .call-now {
+          display: flex;
+        }
       }
     </style>
   </head>
   <body>
     <header>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/FPT_logo_2010.svg" alt="FPT Telecom Logo" class="logo" />
+      <img src="LogoFPT.png" alt="FPT Telecom Logo" class="logo" />
       <nav aria-label="Main navigation">
-        <a href="index.html" class="active">Trang chủ</a> | <a href="products.html">Sản phẩm</a> | <a href="combo.html">Combo</a> |
-        <a href="baogia.html">Báo giá</a> | <a href="lienhe.html">Liên hệ</a>
+        <a href="index.html" class="active">Trang chủ</a>
+        <a href="products.html">Sản phẩm</a>
+        <a href="combo.html">Combo</a>
+        <a href="baogia.html">Báo giá</a>
+        <a href="lienhe.html">Liên hệ</a>
       </nav>
     </header>
+
     <main>
-      <section style="background:linear-gradient(90deg,#ff6f1a 60%,#1877f2 100%);color:#fff;padding:40px 20px 32px 20px;border-radius:18px;box-shadow:0 4px 24px rgba(0,0,0,0.08);margin-bottom:32px;text-align:center;">
-        <h1 style="color:#fff;font-size:2.5rem;margin-bottom:12px;">FPT Telecom - Kết nối tương lai</h1>
-        <p style="font-size:1.2rem;max-width:600px;margin:0 auto 18px auto;">Nhà cung cấp dịch vụ viễn thông và Internet hàng đầu Việt Nam, mang đến các giải pháp công nghệ tiên tiến, chất lượng và đáng tin cậy cho mọi khách hàng cá nhân, gia đình và doanh nghiệp.</p>
-        <a href="lienhe.html" class="btn" style="font-size:1.1rem;">Đăng ký lắp đặt ngay</a>
+      <!-- Hero Section with Video Background -->
+      <section class="hero-section fade-in-up">
+        <div class="video-background">
+          <video id="background-video" muted playsinline>
+            <source src="FPTCamera.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div class="video-overlay"></div>
+        </div>
+        <div class="hero-content">
+          <h1>Lắp đặt Internet FPT - Camera FPT Bình Định</h1>
+          <p class="subtitle">
+            Dịch vụ uy tín, tốc độ cao, khuyến mãi hấp dẫn. Đăng ký ngay hôm
+            nay!
+          </p>
+          <a href="lienhe.html" class="btn">Đăng ký lắp đặt ngay</a>
+        </div>
       </section>
-      <section class="intro">
+
+      <!-- About Section -->
+      <section class="intro fade-in-up">
         <h2>Về FPT Telecom</h2>
-        <p style="text-align:center;max-width:700px;margin:0 auto 24px auto;">FPT Telecom luôn tiên phong đổi mới, lấy khách hàng làm trung tâm, cung cấp các dịch vụ Internet, truyền hình, combo giải trí, camera an ninh với chất lượng vượt trội và giá cả cạnh tranh.</p>
+        <p class="subtitle">
+          FPT Telecom luôn tiên phong đổi mới, lấy khách hàng làm trung tâm,
+          cung cấp các dịch vụ Internet, truyền hình, combo giải trí, camera an
+          ninh với chất lượng vượt trội và giá cả cạnh tranh.
+        </p>
       </section>
-      <h2>Gói dịch vụ nổi bật</h2>
-      <p class="subtitle">Bao gồm gói giá khuyến mãi - Đáp ứng mọi nhu cầu cuộc sống cá nhân, gia đình</p>
-      <div class="packages">
-        <div class="package giga">
-          <img src="https://via.placeholder.com/120x120?text=GIGA" alt="Internet GIGA" />
-          <h2>Internet GIGA</h2>
-          <div class="speed">300 <span>Mbps</span></div>
-          <ul>
-            <li>Phù hợp với cá nhân và hộ gia đình</li>
-            <li>Modem Wi-Fi 6</li>
-          </ul>
-          <a href="baogia.html" class="btn">Xem báo giá</a>
+
+      <!-- Services Section -->
+      <section class="services-section fade-in-up">
+        <h2>Gói dịch vụ nổi bật</h2>
+        <p class="subtitle">
+          Bao gồm gói giá khuyến mãi - Đáp ứng mọi nhu cầu cuộc sống cá nhân,
+          gia đình
+        </p>
+
+        <div class="packages">
+          <!-- GigaEyes3 - Play 4 -->
+          <div class="package package-camera-combo fade-in-up">
+            <div class="package-header">
+              <img src="comboGiGaEyes3 - Play4.png" alt="GigaEyes3 - Play 4" />
+            </div>
+            <div class="package-body">
+              <h2>GigaEyes3 - Play 4</h2>
+              <div class="price">220.000đ<span>/tháng</span></div>
+              <ul>
+                <li>Modem Wi-Fi 6 & Camera Play4</li>
+                <li>Tốc độ lên đến 300 Mbps</li>
+                <li>Gói lưu trữ Cloud 3 ngày</li>
+                <li>Mua 2 camera giá chỉ 350k/cam</li>
+              </ul>
+            </div>
+          </div>
+          <!-- GigaEyes3 - IQ4S -->
+          <div class="package package-camera-combo fade-in-up">
+            <div class="package-header">
+              <img src="comboGigaEyes3-IQ4S.png" alt="GigaEyes3 - IQ4S" />
+            </div>
+            <div class="package-body">
+              <h2>GigaEyes3 - IQ4S</h2>
+              <div class="price">220.000đ<span>/tháng</span></div>
+              <ul>
+                <li>Modem Wi-Fi 6 & Camera IQ4S</li>
+                <li>Tốc độ lên đến 300 Mbps</li>
+                <li>Gói lưu trữ Cloud 3 ngày</li>
+                <li>Mua 2 camera giá chỉ 350k/cam</li>
+              </ul>
+            </div>
+          </div>
+          <!-- GigaEyes3 - Play 3 -->
+          <div class="package package-camera-combo fade-in-up">
+            <div class="package-header">
+              <img src="comboGiGaEyes3 - Play3.png" alt="GigaEyes3 - Play 3" />
+            </div>
+            <div class="package-body">
+              <h2>GigaEyes3 - Play3</h2>
+              <div class="price">220.000đ<span>/tháng</span></div>
+              <ul>
+                <li>Modem Wi-Fi 6 & Camera Play3</li>
+                <li>Tốc độ lên đến 300 Mbps</li>
+                <li>Gói lưu trữ Cloud 3 ngày</li>
+                <li>Mua 2 camera giá chỉ 350k/cam</li>
+              </ul>
+            </div>
+          </div>
+          <!-- SkyEyes3 - Play4 -->
+          <div class="package package-camera-combo fade-in-up">
+            <div class="package-header">
+              <img src="comboSkyEyes3 - Play 4.png" alt="SkyEyes3 - Play4" />
+            </div>
+            <div class="package-body">
+              <h2>SkyEyes3 - Play4</h2>
+              <div class="price">230.000đ<span>/tháng</span></div>
+              <ul>
+                <li>Modem Wi-Fi 6 & Camera Play 4</li>
+                <li>Tốc độ Download lên đến 1 Gbps</li>
+                <li>Gói lưu trữ Cloud 3 ngày</li>
+                <li>Mua 2 camera giá chỉ 350k/cam</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="package sky">
-          <img src="https://via.placeholder.com/120x120?text=SKY" alt="Internet SKY" />
-          <h2>Internet SKY</h2>
-          <div class="speed">1 <span>Gbps</span> <small>300 Mbps Upload</small></div>
-          <ul>
-            <li>Phù hợp với hộ gia đình</li>
-            <li>Modem Wi-Fi 6</li>
-          </ul>
-          <a href="baogia.html" class="btn">Xem báo giá</a>
+
+        <div class="packages standard-combos">
+          <!-- Combo Giải trí -->
+          <div class="package fade-in-up">
+            <h2>Combo Giải trí</h2>
+            <div class="price">200.000đ<span>/tháng</span></div>
+            <ul>
+              <li>Trang bị Modem Wi-Fi 6 & FPT Play Box</li>
+              <li>Tốc độ Download/Upload 300 Mbps</li>
+              <li>Kho phim lẻ, phim bộ, phim chiếu rạp, anime đa dạng</li>
+              <li>
+                Phù hợp cá nhân, hộ gia đình có từ 3 thiết bị kết nối trở lên
+              </li>
+            </ul>
+          </div>
+          <!-- Combo An Tâm -->
+          <div class="package fade-in-up">
+            <h2>Combo An Tâm</h2>
+            <div class="price">245.000đ<span>/tháng</span></div>
+            <ul>
+              <li>Trang bị Modem Wi-Fi 6 & FPT Play Box</li>
+              <li>
+                Chặn trang web độc hại, lừa đảo và quản lý thời gian, nội dung
+                truy cập internet của trẻ
+              </li>
+              <li>Xem hơn 130 kênh truyền hình trong nước & quốc tế</li>
+            </ul>
+          </div>
+          <!-- Combo GIGA -->
+          <div class="package fade-in-up">
+            <h2>Combo GIGA</h2>
+            <div class="price">230.000đ<span>/tháng</span></div>
+            <ul>
+              <li>Trang bị Modem Wi-Fi 6 & FPT Play Box</li>
+              <li>Phù hợp cá nhân, hộ gia đình</li>
+              <li>Xem hơn 130 kênh truyền hình trong nước và quốc tế</li>
+            </ul>
+          </div>
+          <!-- Combo SKY -->
+          <div class="package fade-in-up">
+            <h2>Combo SKY</h2>
+            <div class="price">230.000đ<span>/tháng</span></div>
+            <ul>
+              <li>Trang bị Modem Wi-Fi 6 & FPT Play Box</li>
+              <li>Xem hơn 130 kênh truyền hình trong nước và quốc tế</li>
+              <li>Phù hợp với hộ gia đình</li>
+            </ul>
+          </div>
         </div>
-        <div class="package giai-tri">
-          <img src="https://via.placeholder.com/120x120?text=GIẢI+TRÍ" alt="Combo Giải trí" />
-          <h2>Combo Giải trí</h2>
-          <div class="speed">300 <span>Mbps</span></div>
-          <ul>
-            <li>FPT WiFi 6 cực mạnh</li>
-            <li>Đa dạng kênh truyền hình</li>
-            <li>Kho nội dung phim đa dạng</li>
-          </ul>
-          <a href="baogia.html" class="btn">Xem báo giá</a>
+      </section>
+
+      <!-- Features Section -->
+      <section class="features-section fade-in-up">
+        <h2>Tại sao chọn FPT Telecom?</h2>
+        <div class="features-grid">
+          <div class="feature">
+            <div class="feature-icon">🚀</div>
+            <h3>Tốc độ cao</h3>
+            <p>Internet tốc độ lên đến 1Gbps, đáp ứng mọi nhu cầu sử dụng</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🛡️</div>
+            <h3>Bảo mật tuyệt đối</h3>
+            <p>Hệ thống bảo mật đa lớp, bảo vệ thông tin khách hàng</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">📞</div>
+            <h3>Hỗ trợ 24/7</h3>
+            <p>Đội ngũ kỹ thuật viên chuyên nghiệp, sẵn sàng hỗ trợ mọi lúc</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">💰</div>
+            <h3>Giá cả cạnh tranh</h3>
+            <p>Gói cước đa dạng, phù hợp với mọi đối tượng khách hàng</p>
+          </div>
         </div>
-        <div class="package camera">
-          <img src="https://via.placeholder.com/120x120?text=CAMERA" alt="Combo Camera" />
-          <h2>Combo Camera</h2>
-          <div class="speed">300 <span>Mbps</span></div>
-          <ul>
-            <li>3 ngày gói lưu trữ cloud</li>
-            <li>Camera Play 4 + Modem Wi-Fi 6</li>
-          </ul>
-          <a href="baogia.html" class="btn">Xem báo giá</a>
-        </div>
-      </div>
+      </section>
     </main>
+
     <footer>
-      <div style="text-align:center;margin-bottom:8px;">
-        <a href="https://www.facebook.com/FPTTelecom" target="_blank" aria-label="Facebook FPT Telecom" style="margin:0 8px;"><img src="https://cdn-icons-png.flaticon.com/128/733/733547.png" width="28" alt="Facebook"></a>
-        <a href="https://zalo.me/18006601" target="_blank" aria-label="Zalo FPT Telecom" style="margin:0 8px;"><img src="https://cdn-icons-png.flaticon.com/128/2111/2111728.png" width="28" alt="Zalo"></a>
-        <a href="https://www.youtube.com/user/FptTelecomOnline" target="_blank" aria-label="YouTube FPT Telecom" style="margin:0 8px;"><img src="https://cdn-icons-png.flaticon.com/128/1384/1384060.png" width="28" alt="YouTube"></a>
+      <div class="footer-content">
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3874.506596850438!2d109.2204904!3d13.7737621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x316f6d2e2ac55525%3A0x7229e202dcbfc053!2sL%E1%BA%AFp%20%C4%91%E1%BA%B7t%20Internet%20FPT%20-%20Camera%20FPT%20B%C3%ACnh%20%C4%90%E1%BB%8Bnh!5e0!3m2!1svi!2s"
+            width="100%"
+            height="350"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div class="footer-top">
+          <div class="footer-column about">
+            <img src="LogoFPT.png" alt="FPT Telecom Logo" class="footer-logo" />
+            <p>
+              FPT Telecom - Nhà cung cấp dịch vụ viễn thông hàng đầu Việt Nam,
+              luôn tiên phong đổi mới và mang đến những trải nghiệm kết nối
+              tuyệt vời.
+            </p>
+          </div>
+          <div class="footer-column links">
+            <h4>Về chúng tôi</h4>
+            <ul>
+              <li><a href="index.html">Trang chủ</a></li>
+              <li><a href="products.html">Sản phẩm</a></li>
+              <li><a href="combo.html">Combo</a></li>
+              <li><a href="lienhe.html">Liên hệ</a></li>
+            </ul>
+          </div>
+          <div class="footer-column links">
+            <h4>Dịch vụ</h4>
+            <ul>
+              <li><a href="product-internet.html">Internet FPT</a></li>
+              <li><a href="product-truyenhinh.html">Truyền hình FPT</a></li>
+              <li><a href="product-camera.html">FPT Camera</a></li>
+            </ul>
+          </div>
+          <div class="footer-column contact">
+            <h4>Liên hệ</h4>
+            <p>
+              90B Tây Sơn, P. Nguyễn Văn Cừ, TP. Quy Nhơn, Bình Định<br />
+              <strong>Phone:</strong> 1900 6600<br />
+              <strong>Email:</strong> hotrokh@fpt.vn<br />
+            </p>
+          </div>
+        </div>
       </div>
-      <p>&copy; 2025 FPT Telecom. All rights reserved.</p>
     </footer>
-    <!-- Zalo chat floating button -->
-    <div class="zalo-chat">
-      <a href="https://zalo.me/18006601" target="_blank" aria-label="Chat Zalo FPT Telecom"><img src="https://cdn-icons-png.flaticon.com/128/2111/2111728.png" alt="Chat Zalo"></a>
-    </div>
-    <!-- Call now floating button (mobile) -->
-    <a href="tel:18006601" class="call-now" aria-label="Gọi ngay FPT Telecom"><span>📞</span></a>
+
+    <!-- JavaScript for animations -->
+    <script>
+      // Intersection Observer for fade-in animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+          }
+        });
+      }, observerOptions);
+
+      // Observe all fade-in-up elements
+      document.querySelectorAll(".fade-in-up").forEach((el) => {
+        el.style.opacity = "0";
+        el.style.transform = "translateY(30px)";
+        el.style.transition = "opacity 0.6s ease-out, transform 0.6s ease-out";
+        observer.observe(el);
+      });
+
+      // Smooth scroll for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Set video to start at 6 seconds and loop from there
+      const video = document.getElementById("background-video");
+      if (video) {
+        video.addEventListener("loadedmetadata", function () {
+          this.currentTime = 5.5;
+          this.play();
+        });
+
+        video.addEventListener("ended", function () {
+          this.currentTime = 5.5;
+          this.play();
+        });
+      }
+    </script>
   </body>
 </html>
